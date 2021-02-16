@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Unit : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Unit : MonoBehaviour
 
     public float moveSpeed;
 
-    GameManager gameManager;
+    private GameManager gameManager;
 
     void Start()
     {
@@ -49,36 +50,31 @@ public class Unit : MonoBehaviour
         Tiles[] tiles = FindObjectsOfType<Tiles>();
         foreach (Tiles tile in tiles)
         {
-            if (Mathf.Abs(transform.position.x - tile.transform.position.x) + Mathf.Abs(transform.position.y - tile.transform.position.y) <= tileSpeed)
-            { // how far he can move
+            if (TileInRange(tile) && tile.isClear())
+            { 
                 if (tile.isClear() == true)
-                { // is the tile clear from any obstacles
-                    tile.CanMove();
+                { 
+                    tile.SetCanMove();
                 }
             }
         }
     }
 
+    private bool TileInRange(Tiles tile)
+    {
+        return Mathf.Abs(transform.position.x - tile.transform.position.x) + Mathf.Abs(transform.position.y - tile.transform.position.y) <= tileSpeed;
+    }
+
     public void Move(Vector2 tilePosition)
     {
         gameManager.ResetTiles();
-        StartCoroutine(StartMovement(tilePosition));
-    }
+ 
+        float distance = Vector2.Distance(transform.position, tilePosition);
 
-    IEnumerator StartMovement(Vector2 tilePosition)
-    {
-        while(transform.position.x != tilePosition.x)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(tilePosition.x, transform.position.y), moveSpeed * Time.deltaTime);
-            yield return null;
-        }
-
-        while (transform.position.y != tilePosition.y)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, new Vector2(transform.position.x, tilePosition.y), moveSpeed * Time.deltaTime);
-            yield return null;
-        }
-
+        Sequence moveUnitSequence = DOTween.Sequence();
+        moveUnitSequence.Append(transform.DOMoveX(tilePosition.x, distance / moveSpeed));
+        moveUnitSequence.Append(transform.DOMoveY(tilePosition.y, distance / moveSpeed));
         hasMoved = true;
+
     }
 }

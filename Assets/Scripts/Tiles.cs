@@ -47,7 +47,7 @@ public class Tiles : MonoBehaviour
         }
     }
 
-    public void CanMove()
+    public void SetCanMove()
     {
         spriteRend.color = colorMove;
         isWalkable = true;
