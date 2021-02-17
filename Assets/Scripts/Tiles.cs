@@ -6,7 +6,6 @@ public class Tiles : MonoBehaviour
 {
 
     private SpriteRenderer spriteRend;
-    public Sprite[] tiles;
     public LayerMask obstacles;
 
     public float hoverAmount;
@@ -18,8 +17,6 @@ public class Tiles : MonoBehaviour
     void Start()
     {
         spriteRend = GetComponent<SpriteRenderer>();
-        //  int randomTile = Random.Range(0, tiles.Length);
-        //spriteRend.sprite = tiles[randomTile];
         gameManager = FindObjectOfType<GameManager>();
     }
 
@@ -34,7 +31,7 @@ public class Tiles : MonoBehaviour
         transform.localScale -= Vector3.one * hoverAmount;
     }
 
-    public bool isClear() // does this tile have an obstacle on it. Yes or No?
+    public bool isClear() 
     {
         Collider2D col = Physics2D.OverlapCircle(transform.position, 0.2f, obstacles);
         if (col == null)

@@ -12,6 +12,8 @@ public class Unit : MonoBehaviour
 
     public float moveSpeed;
 
+    public int playerNumber;
+
     private GameManager gameManager;
 
     void Start()
@@ -30,22 +32,25 @@ public class Unit : MonoBehaviour
         }
         else
         {
-            if(gameManager.selectedUnit != null)
+            if(playerNumber == gameManager.playerTurn)
             {
-                gameManager.selectedUnit.selected = false;
-                Debug.Log("gameManager.selectedUnit != null");
+                if (gameManager.selectedUnit != null)
+                {
+                    gameManager.selectedUnit.selected = false;
+                    Debug.Log("gameManager.selectedUnit != null");
+                }
+                selected = true;
+                gameManager.selectedUnit = this;
+                gameManager.ResetTiles();
+                GetWalkablePaths();
             }
-            selected = true;
-            gameManager.selectedUnit = this;
-            gameManager.ResetTiles();
-            GetWalkablePaths();
         }
     }
 
     private void GetWalkablePaths()
     {
-        //Jesli jest tura gracza i ma do poruszenia sie
-        if (hasMoved) return; // nie chcemy aby sie poruszyl ponownie
+       
+        if (hasMoved) return; 
 
         Tiles[] tiles = FindObjectsOfType<Tiles>();
         foreach (Tiles tile in tiles)
@@ -75,6 +80,5 @@ public class Unit : MonoBehaviour
         moveUnitSequence.Append(transform.DOMoveX(tilePosition.x, distance / moveSpeed));
         moveUnitSequence.Append(transform.DOMoveY(tilePosition.y, distance / moveSpeed));
         hasMoved = true;
-
     }
 }
