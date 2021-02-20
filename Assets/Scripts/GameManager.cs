@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
         foreach (Unit units in FindObjectsOfType<Unit>())
         {
             units.hasMoved = false;
+            units.hasAttacked = false;
         }
     }
 }

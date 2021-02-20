@@ -8,7 +8,7 @@ public class Tiles : MonoBehaviour
     private SpriteRenderer spriteRend;
     public LayerMask obstacles;
 
-    public float hoverAmount;
+    public float hoverTile;
     public Color colorMove;
     private bool isWalkable;
     GameManager gameManager;
@@ -23,12 +23,12 @@ public class Tiles : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        transform.localScale += Vector3.one * hoverAmount;
+        transform.localScale += Vector3.one * hoverTile;
     }
 
     private void OnMouseExit()
     {
-        transform.localScale -= Vector3.one * hoverAmount;
+        transform.localScale -= Vector3.one * hoverTile;
     }
 
     public bool isClear() 

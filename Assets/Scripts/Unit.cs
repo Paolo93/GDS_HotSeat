@@ -14,6 +14,15 @@ public class Unit : MonoBehaviour
 
     public int playerNumber;
 
+    public int attackRange;
+    List<Unit> enemiesInRange = new List<Unit>();
+    public bool hasAttacked;
+
+    public int health;
+    public int attackDamage;
+    public int defenseDamage;
+    public int armor;
+
     private GameManager gameManager;
 
     void Start()
@@ -42,7 +51,18 @@ public class Unit : MonoBehaviour
                 selected = true;
                 gameManager.selectedUnit = this;
                 gameManager.ResetTiles();
+                GetEnemies();
                 GetWalkablePaths();
+            }
+        }
+
+        Collider2D collider = Physics2D.OverlapCircle(Camera.main.ScreenToWorldPoint(Input.mousePosition), 0.15f);
+        Unit unit = collider.GetComponent<Unit>();
+        if(gameManager.selectedUnit != null)
+        {
+            if(gameManager.selectedUnit.enemiesInRange.Contains(unit) && gameManager.selectedUnit.hasAttacked == false)
+            {
+                gameManager.selectedUnit.Attack(unit);
             }
         }
     }
@@ -65,6 +85,50 @@ public class Unit : MonoBehaviour
         }
     }
 
+    void Attack(Unit enemy)
+    {
+        hasAttacked = true;
+        int enemyDamage = attackDamage - enemy.armor;
+        int myDamage = enemy.defenseDamage - armor;
+
+        if (enemyDamage >= 1)
+        {
+            enemy.health -= enemyDamage;
+        }
+
+        if (myDamage >= 1)
+        {
+            health -= myDamage;
+        }
+
+        if (enemy.health <= 0)
+        {
+            Destroy(enemy.gameObject);
+            GetWalkablePaths();
+        }
+
+        if (health <= 0)
+        {
+            gameManager.ResetTiles();
+            Destroy(this.gameObject);
+        }
+    }
+
+    void GetEnemies()
+    {
+        enemiesInRange.Clear();
+        foreach(Unit unit in FindObjectsOfType<Unit>())
+        {
+            if(Mathf.Abs(transform.position.x - unit.transform.position.x) + Mathf.Abs(transform.position.y - unit.transform.position.y) <= attackRange)
+            {
+                if(unit.playerNumber != gameManager.playerTurn && !hasAttacked) // attack only player from another turn
+                {
+                    enemiesInRange.Add(unit);
+                }
+            }
+        }
+    }
+
     private bool TileInRange(Tiles tile)
     {
         return Mathf.Abs(transform.position.x - tile.transform.position.x) + Mathf.Abs(transform.position.y - tile.transform.position.y) <= tileSpeed;
@@ -80,5 +144,6 @@ public class Unit : MonoBehaviour
         moveUnitSequence.Append(transform.DOMoveX(tilePosition.x, distance / moveSpeed));
         moveUnitSequence.Append(transform.DOMoveY(tilePosition.y, distance / moveSpeed));
         hasMoved = true;
+        GetEnemies();
     }
 }
