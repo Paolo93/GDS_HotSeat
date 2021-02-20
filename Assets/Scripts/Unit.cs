@@ -6,18 +6,20 @@ using DG.Tweening;
 public class Unit : MonoBehaviour
 {
 
-    public bool selected;
-    public int tileSpeed;
-    public bool hasMoved;
+    
+    [HideInInspector] public bool hasMoved, selected, hasAttacked;
 
-    public float moveSpeed;
-
+    [Tooltip("Amount of tiles to walk")] public int tileAmount;
+    [Tooltip("Speed of unit")] public float moveSpeed;
+   
     public int playerNumber;
-
     public int attackRange;
-    List<Unit> enemiesInRange = new List<Unit>();
-    public bool hasAttacked;
 
+    List<Unit> enemiesInRange = new List<Unit>();
+
+    [Space(10)]
+    [Header("Unit Stats Battle")]
+    
     public int health;
     public int attackDamage;
     public int defenseDamage;
@@ -131,7 +133,7 @@ public class Unit : MonoBehaviour
 
     private bool TileInRange(Tiles tile)
     {
-        return Mathf.Abs(transform.position.x - tile.transform.position.x) + Mathf.Abs(transform.position.y - tile.transform.position.y) <= tileSpeed;
+        return Mathf.Abs(transform.position.x - tile.transform.position.x) + Mathf.Abs(transform.position.y - tile.transform.position.y) <= tileAmount;
     }
 
     public void Move(Vector2 tilePosition)
