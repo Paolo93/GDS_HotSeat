@@ -6,8 +6,8 @@ using DG.Tweening;
 public class Unit : MonoBehaviour
 {
 
-    
-    [HideInInspector] public bool hasMoved, selected, hasAttacked;
+    //[HideInInspector]
+    public bool hasMoved, selected, hasAttacked;
 
     [Tooltip("Amount of tiles to walk")] public int tileAmount;
     [Tooltip("Speed of unit")] public float moveSpeed;
@@ -26,15 +26,26 @@ public class Unit : MonoBehaviour
     public int armor;
 
     private GameManager gameManager;
+    public GameObject AttackIcon;
 
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
     }
 
+    private void OnMouseOver()
+    {
+        if(Input.GetMouseButtonDown(1))
+        {
+            gameManager.ShowStatsPanel(this);
+        }
+    }
+
     private void OnMouseDown()
     {
-        if(selected)//ready to select
+        DisableAttackIcon();
+
+        if (selected)//ready to select
         {
             selected = false;
             gameManager.selectedUnit = null;
@@ -107,13 +118,17 @@ public class Unit : MonoBehaviour
         {
             Destroy(enemy.gameObject);
             GetWalkablePaths();
+            gameManager.RemoveStatsPanel(enemy);
         }
 
         if (health <= 0)
         {
             gameManager.ResetTiles();
+            gameManager.RemoveStatsPanel(this);
             Destroy(this.gameObject);
         }
+
+        gameManager.UpdateStatsPanel();
     }
 
     void GetEnemies()
@@ -126,8 +141,17 @@ public class Unit : MonoBehaviour
                 if(unit.playerNumber != gameManager.playerTurn && !hasAttacked) // attack only player from another turn
                 {
                     enemiesInRange.Add(unit);
+                    unit.AttackIcon.SetActive(true);
                 }
             }
+        }
+    }
+
+    public void DisableAttackIcon()
+    {
+        foreach (Unit units in FindObjectsOfType<Unit>())
+        {
+            units.AttackIcon.SetActive(false);
         }
     }
 
@@ -139,13 +163,15 @@ public class Unit : MonoBehaviour
     public void Move(Vector2 tilePosition)
     {
         gameManager.ResetTiles();
- 
         float distance = Vector2.Distance(transform.position, tilePosition);
 
         Sequence moveUnitSequence = DOTween.Sequence();
         moveUnitSequence.Append(transform.DOMoveX(tilePosition.x, distance / moveSpeed));
         moveUnitSequence.Append(transform.DOMoveY(tilePosition.y, distance / moveSpeed));
+
         hasMoved = true;
+        DisableAttackIcon();
         GetEnemies();
+        gameManager.ShiftStatsPanel(this);
     }
 }
