@@ -45,21 +45,19 @@ public class Unit : MonoBehaviour
     {
         DisableAttackIcon();
 
-        if (selected)//ready to select
+        if (selected) // if currently unit is selected
         {
             selected = false;
             gameManager.selectedUnit = null;
             gameManager.ResetTiles();
-            Debug.Log("isSelected = true");
         }
         else
         {
-            if(playerNumber == gameManager.playerTurn)
+            if(playerNumber == gameManager.playerTurn) // if our turn
             {
-                if (gameManager.selectedUnit != null)
+                if (gameManager.selectedUnit != null)// safe
                 {
                     gameManager.selectedUnit.selected = false;
-                    Debug.Log("gameManager.selectedUnit != null");
                 }
                 selected = true;
                 gameManager.selectedUnit = this;
@@ -89,13 +87,14 @@ public class Unit : MonoBehaviour
         foreach (Tiles tile in tiles)
         {
             if (TileInRange(tile) && tile.isClear())
-            { 
+            { // how far he can move
                 if (tile.isClear() == true)
-                { 
+                {
                     tile.SetCanMove();
                 }
             }
         }
+
     }
 
     void Attack(Unit enemy)
@@ -159,19 +158,21 @@ public class Unit : MonoBehaviour
     {
         return Mathf.Abs(transform.position.x - tile.transform.position.x) + Mathf.Abs(transform.position.y - tile.transform.position.y) <= tileAmount;
     }
+   
+     public void Move(Transform tilePosition)
+     {
+         gameManager.ResetTiles();
+         float distance = Vector2.Distance(transform.position, tilePosition.position);
 
-    public void Move(Vector2 tilePosition)
-    {
-        gameManager.ResetTiles();
-        float distance = Vector2.Distance(transform.position, tilePosition);
+         Sequence moveUnitSequence = DOTween.Sequence();
+         moveUnitSequence.Append(transform.DOMoveX(tilePosition.position.x, distance / moveSpeed));
+         moveUnitSequence.Append(transform.DOMoveY(tilePosition.position.y, distance / moveSpeed));
+         moveUnitSequence.AppendCallback(() => hasMoved = true);
+         moveUnitSequence.AppendCallback(() => GetEnemies());
 
-        Sequence moveUnitSequence = DOTween.Sequence();
-        moveUnitSequence.Append(transform.DOMoveX(tilePosition.x, distance / moveSpeed));
-        moveUnitSequence.Append(transform.DOMoveY(tilePosition.y, distance / moveSpeed));
+         DisableAttackIcon();
 
-        hasMoved = true;
-        DisableAttackIcon();
-        GetEnemies();
-        gameManager.ShiftStatsPanel(this);
-    }
+         gameManager.ShiftStatsPanel(this);
+     }
+
 }

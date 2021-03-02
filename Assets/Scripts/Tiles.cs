@@ -58,9 +58,9 @@ public class Tiles : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(isWalkable && gameManager.selectedUnit != null)
+        if(isWalkable) // && gameManager.selectedUnit != null
         {
-            gameManager.selectedUnit.Move(this.transform.position);
+            gameManager.selectedUnit.Move(this.transform);
         }
     }
 }
