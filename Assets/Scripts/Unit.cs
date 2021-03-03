@@ -14,6 +14,7 @@ public class Unit : MonoBehaviour
    
     public int playerNumber;
     public int attackRange;
+    public int value;
 
     List<Unit> enemiesInRange = new List<Unit>();
 
@@ -100,6 +101,8 @@ public class Unit : MonoBehaviour
     void Attack(Unit enemy)
     {
         hasAttacked = true;
+        hasMoved = true;
+        gameManager.ResetTiles();
         int enemyDamage = attackDamage - enemy.armor;
         int myDamage = enemy.defenseDamage - armor;
 
@@ -128,6 +131,7 @@ public class Unit : MonoBehaviour
         }
 
         gameManager.UpdateStatsPanel();
+        
     }
 
     void GetEnemies()
