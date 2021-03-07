@@ -57,8 +57,6 @@ public class Unit : MonoBehaviour
                 }
             }
         }
-
-   
     }
 
     private void OnMouseDown()
@@ -129,6 +127,16 @@ public class Unit : MonoBehaviour
 
     }
 
+    void DeflectingAttack()
+    {
+        //pass
+    }
+
+    void AreaAttack()
+    {
+        //pass
+    }
+
     void Heal (Unit unit)
     {
         hasAttacked = true;
@@ -143,8 +151,6 @@ public class Unit : MonoBehaviour
         hasAttacked = true;
         hasMoved = true;
         gameManager.ResetTiles();
-        //int enemyDamage = attackDamage - enemy.armor;
-        //int myDamage = enemy.defenseDamage - armor;
 
         int myDamage = attackDamage - enemy.armor;
 
@@ -157,12 +163,7 @@ public class Unit : MonoBehaviour
         {
             Debug.Log("Miss");
         }
-/*
-        if (myDamage >= 1)
-        {
-            health -= myDamage;
-        }
-*/
+
         if (enemy.health <= 0)
         {
             Destroy(enemy.gameObject);
