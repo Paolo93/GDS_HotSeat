@@ -6,8 +6,11 @@ using DG.Tweening;
 public class Unit : MonoBehaviour
 {
 
-    //[HideInInspector]
+    [HideInInspector]
     public bool hasMoved, selected, hasAttacked;
+
+    public bool isKing;
+    private int hpPoint = 5;
 
     [Tooltip("Amount of tiles to walk")] public int tileAmount;
     [Tooltip("Speed of unit")] public float moveSpeed;
@@ -17,14 +20,17 @@ public class Unit : MonoBehaviour
     public int value;
 
     List<Unit> enemiesInRange = new List<Unit>();
+    List<Unit> myUnitsInRange = new List<Unit>();
+    
 
     [Space(10)]
     [Header("Unit Stats Battle")]
     
     public int health;
     public int attackDamage;
-    public int defenseDamage;
+   // public int defenseDamage;
     public int armor;
+    public int chance;
 
     private GameManager gameManager;
     public GameObject AttackIcon;
@@ -39,7 +45,20 @@ public class Unit : MonoBehaviour
         if(Input.GetMouseButtonDown(1))
         {
             gameManager.ShowStatsPanel(this);
+ 
+            Collider2D collider = Physics2D.OverlapCircle(Camera.main.ScreenToWorldPoint(Input.mousePosition), 0.15f);
+            Unit unit = collider.GetComponent<Unit>();
+            DisableAttackIcon();
+            if (gameManager.selectedUnit != null && gameManager.selectedUnit.isKing == true)
+            {
+                if (gameManager.selectedUnit.myUnitsInRange.Contains(unit) && gameManager.selectedUnit.hasAttacked == false)
+                {
+                    gameManager.selectedUnit.Heal(unit);
+                }
+            }
         }
+
+   
     }
 
     private void OnMouseDown()
@@ -54,34 +73,46 @@ public class Unit : MonoBehaviour
         }
         else
         {
-            if(playerNumber == gameManager.playerTurn) // if our turn
+            if (playerNumber == gameManager.playerTurn) // if our turn
             {
                 if (gameManager.selectedUnit != null)// safe
                 {
                     gameManager.selectedUnit.selected = false;
                 }
+                if (isKing)
+                {
+                    GetMyUnits();
+                    Debug.Log("King");
+                }
+                else
+                {
+                    GetEnemies(); 
+                    Debug.Log("Unit");
+                }
                 selected = true;
                 gameManager.selectedUnit = this;
                 gameManager.ResetTiles();
-                GetEnemies();
                 GetWalkablePaths();
             }
         }
 
         Collider2D collider = Physics2D.OverlapCircle(Camera.main.ScreenToWorldPoint(Input.mousePosition), 0.15f);
-        Unit unit = collider.GetComponent<Unit>();
-        if(gameManager.selectedUnit != null)
+        Unit unit = collider.GetComponent<Unit>(); 
+
+        if (Input.GetMouseButtonDown(0))
         {
-            if(gameManager.selectedUnit.enemiesInRange.Contains(unit) && gameManager.selectedUnit.hasAttacked == false)
+            if (gameManager.selectedUnit != null)
             {
-                gameManager.selectedUnit.Attack(unit);
+                if (gameManager.selectedUnit.enemiesInRange.Contains(unit) && gameManager.selectedUnit.hasAttacked == false && gameManager.selectedUnit.isKing == false)
+                {
+                    gameManager.selectedUnit.Attack(unit);
+                }
             }
         }
     }
 
     private void GetWalkablePaths()
     {
-       
         if (hasMoved) return; 
 
         Tiles[] tiles = FindObjectsOfType<Tiles>();
@@ -98,24 +129,40 @@ public class Unit : MonoBehaviour
 
     }
 
+    void Heal (Unit unit)
+    {
+        hasAttacked = true;
+        hasMoved = true;
+        gameManager.ResetTiles();
+        unit.health += hpPoint;
+        gameManager.UpdateStatsPanel();
+    }
+
     void Attack(Unit enemy)
     {
         hasAttacked = true;
         hasMoved = true;
         gameManager.ResetTiles();
-        int enemyDamage = attackDamage - enemy.armor;
-        int myDamage = enemy.defenseDamage - armor;
+        //int enemyDamage = attackDamage - enemy.armor;
+        //int myDamage = enemy.defenseDamage - armor;
 
-        if (enemyDamage >= 1)
+        int myDamage = attackDamage - enemy.armor;
+
+        if(Random.Range(0, 100) < chance)
         {
-            enemy.health -= enemyDamage;
+            enemy.health -= myDamage;
+            Debug.Log("Correct");
         }
-
+        else
+        {
+            Debug.Log("Miss");
+        }
+/*
         if (myDamage >= 1)
         {
             health -= myDamage;
         }
-
+*/
         if (enemy.health <= 0)
         {
             Destroy(enemy.gameObject);
@@ -150,6 +197,22 @@ public class Unit : MonoBehaviour
         }
     }
 
+    void GetMyUnits()
+    {
+        myUnitsInRange.Clear();
+        foreach (Unit unit in FindObjectsOfType<Unit>())
+        {
+            if (Mathf.Abs(transform.position.x - unit.transform.position.x) + Mathf.Abs(transform.position.y - unit.transform.position.y) <= attackRange)
+            {
+                if (unit.playerNumber == gameManager.playerTurn) 
+                {
+                    myUnitsInRange.Add(unit);
+                   //unit.AttackIcon.SetActive(false);
+                }
+            }
+        }
+    }
+
     public void DisableAttackIcon()
     {
         foreach (Unit units in FindObjectsOfType<Unit>())
@@ -172,7 +235,8 @@ public class Unit : MonoBehaviour
          moveUnitSequence.Append(transform.DOMoveX(tilePosition.position.x, distance / moveSpeed));
          moveUnitSequence.Append(transform.DOMoveY(tilePosition.position.y, distance / moveSpeed));
          moveUnitSequence.AppendCallback(() => hasMoved = true);
-         moveUnitSequence.AppendCallback(() => GetEnemies());
+        if (!isKing) { moveUnitSequence.AppendCallback(() => GetEnemies()); }
+         
 
          DisableAttackIcon();
 
