@@ -342,6 +342,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 52644343}
     m_Modifications:
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: armor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: chance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: AttackIcon
+      value: 
+      objectReference: {fileID: 3091956735372353807}
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: tileAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: attackRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: attackDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: playerNumber
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3091956734129224806, guid: e10b67bb92122544d90ce59aa6335b90,
         type: 3}
       propertyPath: m_RootOrder
@@ -521,6 +566,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464029935241617502, guid: ae392c94c442b924ea69ad4de1fb38e6,
+        type: 3}
+      propertyPath: armor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464029935241617502, guid: ae392c94c442b924ea69ad4de1fb38e6,
+        type: 3}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464029935241617502, guid: ae392c94c442b924ea69ad4de1fb38e6,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464029935241617502, guid: ae392c94c442b924ea69ad4de1fb38e6,
+        type: 3}
+      propertyPath: tileAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464029935241617502, guid: ae392c94c442b924ea69ad4de1fb38e6,
+        type: 3}
+      propertyPath: attackRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464029935241617502, guid: ae392c94c442b924ea69ad4de1fb38e6,
+        type: 3}
+      propertyPath: playerNumber
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8389889612625198274, guid: ae392c94c442b924ea69ad4de1fb38e6,
         type: 3}
@@ -2122,6 +2197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 874764509}
   - component: {fileID: 874764508}
+  - component: {fileID: 874764510}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2141,7 +2217,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9f477d4b3532f444a36f1198721a2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedUnit: {fileID: 0}
   playerTurn: 1
   statsPanel: {fileID: 1205467602}
   offsetStatsPanel: {x: 1, y: 1}
@@ -2163,6 +2238,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &874764510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 874764507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e231d0c4bd1af14fb9ca9e1adfe4e5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 1821336562}
+  selectedUnit: {fileID: 0}
+  TargetableUnits: []
 --- !u!1001 &982027408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5377,6 +5467,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 52644343}
     m_Modifications:
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: armor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: chance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: AttackIcon
+      value: 
+      objectReference: {fileID: 3091956735372353807}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: tileAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: attackRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: attackDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: playerNumber
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4018344409325511367, guid: b81bf8250c9de7042b5b3bc20259e7d1,
         type: 3}
       propertyPath: m_RootOrder
@@ -6382,6 +6517,51 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 52644343}
     m_Modifications:
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: armor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: chance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: AttackIcon
+      value: 
+      objectReference: {fileID: 3091956735372353807}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: tileAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: attackRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: attackDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: playerNumber
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4018344409325511367, guid: b81bf8250c9de7042b5b3bc20259e7d1,
         type: 3}
       propertyPath: m_RootOrder
@@ -6491,6 +6671,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 52644343}
     m_Modifications:
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: armor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: chance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: tileAmount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: attackRange
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: attackDamage
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: playerNumber
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3091956734129224806, guid: e10b67bb92122544d90ce59aa6335b90,
         type: 3}
       propertyPath: m_RootOrder
@@ -6588,3 +6808,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e10b67bb92122544d90ce59aa6335b90, type: 3}
+--- !u!1 &3091956735372353807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3820138161393887405, guid: e10b67bb92122544d90ce59aa6335b90,
+    type: 3}
+  m_PrefabInstance: {fileID: 3091956735372353806}
+  m_PrefabAsset: {fileID: 0}

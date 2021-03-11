@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4018344409325511367}
   - component: {fileID: 4018344409325511368}
   - component: {fileID: 4018344409325511369}
-  - component: {fileID: 8514433913492887564}
+  - component: {fileID: 1007896119763460715}
   m_Layer: 10
   m_Name: Avocado
   m_TagString: Untagged
@@ -110,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.27003813, y: 0.2940197}
   m_EdgeRadius: 0
---- !u!114 &8514433913492887564
+--- !u!114 &1007896119763460715
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,21 +119,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 4018344409325511370}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d971dd579b0072e419d8b536882eecab, type: 3}
+  m_Script: {fileID: 11500000, guid: 9249df2b6d07e14469102aad4e095695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoved: 0
-  selected: 0
-  hasAttacked: 0
   tileAmount: 0
-  moveSpeed: 6
-  playerNumber: 2
+  moveSpeed: 0
+  playerNumber: 0
+  health: 0
+  armor: 0
   attackRange: 0
-  health: 40
-  attackDamage: 5
-  defenseDamage: 6
-  armor: 2
   AttackIcon: {fileID: 5307314573191143497}
+  attackDamage: 0
+  chance: 0
+  hasAttacked: 0
 --- !u!1 &5307314573191143497
 GameObject:
   m_ObjectHideFlags: 0

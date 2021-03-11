@@ -1,13 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-
-    public Unit selectedUnit;
-
     public int playerTurn = 1;
 
     public GameObject statsPanel;
@@ -17,17 +12,23 @@ public class GameManager : MonoBehaviour
     public Text attackDamageTxt;
     public Text defenseDamageTxt;
     public Text armorTxt;
+    private UnitManager UnitManager;
 
+    private void Start()
+    {
+        UnitManager = FindObjectOfType<UnitManager>();
+    }
 
     public void ShowStatsPanel(Unit unit)
     {
-        if(unit.Equals(activeUnit) == false)
+        if (unit != activeUnit)
         {
             statsPanel.SetActive(true);
             statsPanel.transform.position = (Vector2)unit.transform.position + offsetStatsPanel;
             activeUnit = unit;
             UpdateStatsPanel();
-        } else
+        }
+        else
         {
             statsPanel.SetActive(false);
             activeUnit = null;
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     public void ShiftStatsPanel(Unit unit)
     {
-        if (unit.Equals(activeUnit))
+        if (unit == activeUnit)
         {
             statsPanel.transform.position = (Vector2)unit.transform.position + offsetStatsPanel;
         }
@@ -71,28 +72,23 @@ public class GameManager : MonoBehaviour
     //Switch Turn
     public void Switch()
     {
-        if(playerTurn == 1)
+        if (playerTurn == 1)
         {
             playerTurn = 2;
         }
-        else if(playerTurn == 2)
+        else if (playerTurn == 2)
         {
             playerTurn = 1;
         }
 
-        if (selectedUnit != null)
-        {
-            selectedUnit.selected = false;
-            selectedUnit = null;
-        }
+        UnitManager.DeselectUnit();
 
         ResetTiles();
 
         foreach (Unit units in FindObjectsOfType<Unit>())
         {
-            units.hasMoved = false;
-            units.AttackIcon.SetActive(false);
-            units.hasAttacked = false;
+            units.ResetState();
+            Unit.DisableAttackIcon();
         }
     }
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3091956734129224806}
   - component: {fileID: 3091956734129224809}
   - component: {fileID: 3091956734129224808}
-  - component: {fileID: 7711719744812369581}
+  - component: {fileID: 831052307984486974}
   m_Layer: 10
   m_Name: Pork
   m_TagString: Untagged
@@ -110,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.27003813, y: 0.2940197}
   m_EdgeRadius: 0
---- !u!114 &7711719744812369581
+--- !u!114 &831052307984486974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,22 +119,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 3091956734129224811}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d971dd579b0072e419d8b536882eecab, type: 3}
+  m_Script: {fileID: 11500000, guid: 9249df2b6d07e14469102aad4e095695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoved: 0
   selected: 0
   hasAttacked: 0
+  isKing: 0
   tileAmount: 0
-  moveSpeed: 6
-  playerNumber: 1
+  moveSpeed: 0
+  playerNumber: 0
   attackRange: 0
   value: 0
-  health: 10
-  attackDamage: 6
-  defenseDamage: 5
-  armor: 1
+  health: 0
+  attackDamage: 0
+  armor: 0
+  chance: 0
   AttackIcon: {fileID: 3820138161393887405}
+  attackDamage: 0
+  chance: 0
+  hasAttacked: 0
 --- !u!1 &3820138161393887405
 GameObject:
   m_ObjectHideFlags: 0

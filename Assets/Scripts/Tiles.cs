@@ -12,12 +12,13 @@ public class Tiles : MonoBehaviour
     public Color colorMove;
     private bool isWalkable;
     GameManager gameManager;
-
+    private UnitManager UnitManager;
 
     void Start()
     {
         spriteRend = GetComponent<SpriteRenderer>();
         gameManager = FindObjectOfType<GameManager>();
+        UnitManager = FindObjectOfType<UnitManager>();
     }
 
 
@@ -58,9 +59,12 @@ public class Tiles : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if(isWalkable) // && gameManager.selectedUnit != null
+        if (isWalkable) // && gameManager.selectedUnit != null
         {
-            gameManager.selectedUnit.Move(this.transform);
+            if (UnitManager.selectedUnit != null && !UnitManager.selectedUnit.hasMoved)
+            {
+                UnitManager.selectedUnit.Move(this.transform);
+            }
         }
     }
 }

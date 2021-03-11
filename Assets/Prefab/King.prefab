@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 3856135016409843209}
   - component: {fileID: 3856135016409843206}
   - component: {fileID: 3856135016409843207}
-  - component: {fileID: 8389889612625198274}
+  - component: {fileID: 5464029935241617502}
   m_Layer: 10
   m_Name: King
   m_TagString: Untagged
@@ -191,7 +191,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.27003813, y: 0.2940197}
   m_EdgeRadius: 0
---- !u!114 &8389889612625198274
+--- !u!114 &5464029935241617502
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,20 +200,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 3856135016409843204}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d971dd579b0072e419d8b536882eecab, type: 3}
+  m_Script: {fileID: 11500000, guid: 4cfba614d39c81046aee11d6d86fc778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoved: 0
-  selected: 0
-  hasAttacked: 0
-  isKing: 1
-  tileAmount: 3
-  moveSpeed: 6
-  playerNumber: 1
-  attackRange: 1
-  value: 0
-  health: 15
-  attackDamage: 10
-  defenseDamage: 5
-  armor: 1
+  tileAmount: 0
+  moveSpeed: 0
+  playerNumber: 0
+  health: 0
+  armor: 0
+  attackRange: 0
   AttackIcon: {fileID: 3055889656280257218}
+  healAmount: 5
+  hasHealed: 0
