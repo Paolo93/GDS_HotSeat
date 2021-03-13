@@ -8,11 +8,23 @@ public class GameManager : MonoBehaviour
     public GameObject statsPanel;
     public Vector2 offsetStatsPanel;
     private Unit activeUnit;
+
+    public int numberOfTurn = 0;
+
+    public Text numberOfTurnTxt;
     public Text healthTxt;
     public Text attackDamageTxt;
     public Text defenseDamageTxt;
     public Text armorTxt;
     private UnitManager UnitManager;
+
+    public int NumberOfTurn
+    {
+        get
+        {
+            return numberOfTurn;
+        }
+    }
 
     private void Start()
     {
@@ -33,6 +45,12 @@ public class GameManager : MonoBehaviour
             statsPanel.SetActive(false);
             activeUnit = null;
         }
+    }
+
+    public void UpdateTurn()
+    {
+        numberOfTurn++;
+        numberOfTurnTxt.text = "Turn: " + numberOfTurn.ToString();
     }
 
     public void UpdateStatsPanel()
@@ -74,11 +92,12 @@ public class GameManager : MonoBehaviour
     {
         if (playerTurn == 1)
         {
-            playerTurn = 2;
+            playerTurn = 2; 
         }
         else if (playerTurn == 2)
         {
             playerTurn = 1;
+            UpdateTurn();
         }
 
         UnitManager.DeselectUnit();

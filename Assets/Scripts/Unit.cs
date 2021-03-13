@@ -10,12 +10,11 @@ public class Unit : MonoBehaviour
     //[HideInInspector]
     public bool hasMoved;
 
-    private int hpPoint = 5;
-
     [Tooltip("Amount of tiles to walk")] public int tileAmount;
     [Tooltip("Speed of unit")] public float moveSpeed;
 
     public int playerNumber;
+    public string unitTag;
 
     [Space(10)]
     [Header("Unit Stats Battle")]
@@ -32,6 +31,7 @@ public class Unit : MonoBehaviour
     {
         gameManager = FindObjectOfType<GameManager>();
         unitManager = FindObjectOfType<UnitManager>();
+       // this.gameObject.tag = unitTag;
     }
 
     public void GetWalkablePaths()
@@ -69,7 +69,7 @@ public class Unit : MonoBehaviour
         return UnitsInRange().Where(x => x.playerNumber != gameManager.playerTurn);// select my enemies
     }
 
-    private IEnumerable<Unit> UnitsInRange()
+    protected IEnumerable<Unit> UnitsInRange()
     {
         return FindObjectsOfType<Unit>().Where(x => TargetInAttackRange(x.transform)); // select general unit
     }

@@ -10,13 +10,20 @@ public class Soldier : Unit, IAttacker
 
     public void Attack(Unit enemy)
     {
+        int bonus = 0;
+        (string attack, string target) interaction = (this.gameObject.tag, enemy.gameObject.tag);
+        if (TagBonuses.bonusDMG.ContainsKey(interaction))
+        {
+            bonus = TagBonuses.bonusDMG[interaction];
+        }
+
         if (AttackableUnits().Contains(enemy))
         {
             hasAttacked = true;
             hasMoved = true;
             gameManager.ResetTiles();
 
-            int myDamage = attackDamage - enemy.armor;
+            int myDamage = attackDamage - enemy.armor + bonus;
 
             if (Random.Range(0, 100) < chance)
             {

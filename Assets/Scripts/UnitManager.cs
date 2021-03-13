@@ -135,6 +135,13 @@ public class UnitManager : MonoBehaviour
                 healer.Heal(clickedUnit);
             }
         }
+
+        if (selectedUnit is IMassAtacker massAtacker)
+        {
+            var clickedUnit = TargetableUnits;
+           // massAtacker.MassAttack(TargetableUnits);
+        }
+
     }
 
     private static Unit GetNewClickedUnit()
@@ -160,5 +167,5 @@ public class UnitManager : MonoBehaviour
 
         return clickedUnit;
     }
-
+ 
 }

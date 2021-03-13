@@ -6,10 +6,9 @@ public class King : Unit, IHealer
 {
 	public int healAmount = 5;
 
-
 	public bool hasHealed = false;
-	
-	public void Heal(Unit target)
+
+    public void Heal(Unit target)
 	{
 		if (HealableUnits().Contains(target))
 		{
