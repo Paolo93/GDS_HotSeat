@@ -18,11 +18,12 @@ public class Unit : MonoBehaviour
 
     [Space(10)]
     [Header("Unit Stats Battle")]
+    public int attackDamage;
+    public int chance;
     public int health;
     public int armor;
     public int attackRange;
-    
-    
+
     protected GameManager gameManager;
     protected UnitManager unitManager;
     public GameObject AttackIcon;
@@ -31,7 +32,6 @@ public class Unit : MonoBehaviour
     {
         gameManager = FindObjectOfType<GameManager>();
         unitManager = FindObjectOfType<UnitManager>();
-       // this.gameObject.tag = unitTag;
     }
 
     public void GetWalkablePaths()
@@ -118,7 +118,16 @@ public class Unit : MonoBehaviour
 
         DisableAttackIcon();
 
-        gameManager.ShiftStatsPanel(this);
+    }
+
+    public void OnMouseEnter()
+    {
+        gameManager.ShowStatsPanel(this);
+    }
+
+    public void OnMouseExit()
+    {
+        gameManager.RemoveStatsPanel(this);
     }
 
     public void ResetState()

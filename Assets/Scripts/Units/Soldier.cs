@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Soldier : Unit, IAttacker
 {
-    public int attackDamage;
-    public int chance;
+    
     public bool hasAttacked;
 
     public void Attack(Unit enemy)

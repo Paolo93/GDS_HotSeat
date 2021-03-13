@@ -6,16 +6,18 @@ public class GameManager : MonoBehaviour
     public int playerTurn = 1;
 
     public GameObject statsPanel;
-    public Vector2 offsetStatsPanel;
+   
     private Unit activeUnit;
 
     public int numberOfTurn = 0;
 
     public Text numberOfTurnTxt;
+
     public Text healthTxt;
     public Text attackDamageTxt;
-    public Text defenseDamageTxt;
     public Text armorTxt;
+    public Text attackRangeTxt, chanceTxt;
+ 
     private UnitManager UnitManager;
 
     public int NumberOfTurn
@@ -36,9 +38,10 @@ public class GameManager : MonoBehaviour
         if (unit != activeUnit)
         {
             statsPanel.SetActive(true);
-            statsPanel.transform.position = (Vector2)unit.transform.position + offsetStatsPanel;
+            
             activeUnit = unit;
             UpdateStatsPanel();
+            Debug.Log("test");
         }
         else
         {
@@ -55,18 +58,11 @@ public class GameManager : MonoBehaviour
 
     public void UpdateStatsPanel()
     {
-        if(activeUnit != null)
-        {
-            healthTxt.text = activeUnit.health.ToString();
-        }
-    }
-
-    public void ShiftStatsPanel(Unit unit)
-    {
-        if (unit == activeUnit)
-        {
-            statsPanel.transform.position = (Vector2)unit.transform.position + offsetStatsPanel;
-        }
+        healthTxt.text = activeUnit.health.ToString();
+        attackDamageTxt.text = activeUnit.attackDamage.ToString();
+        armorTxt.text = activeUnit.armor.ToString();
+        attackRangeTxt.text = activeUnit.attackRange.ToString();
+        chanceTxt.text = activeUnit.chance.ToString();
     }
 
     public void RemoveStatsPanel(Unit unit)
