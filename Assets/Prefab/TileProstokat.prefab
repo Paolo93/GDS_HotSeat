@@ -26,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1189124726602060560}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -124,5 +124,5 @@ MonoBehaviour:
   obstacles:
     serializedVersion: 2
     m_Bits: 1024
-  hoverTile: 0
+  hoverTile: 0.25
   colorMove: {r: 0.050062295, g: 0.22539143, b: 0.7075472, a: 0.64705884}

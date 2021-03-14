@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 
-public class King : Unit, IHealer
+public class Hospital : Unit, IHealer
 {
 	public int healAmount = 5;
 

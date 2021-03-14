@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3856135016409843207}
   - component: {fileID: 5464029935241617502}
   m_Layer: 10
-  m_Name: King
+  m_Name: SzpitalZloty
   m_TagString: water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,13 +204,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoved: 0
-  tileAmount: 0
-  moveSpeed: 0
-  playerNumber: 0
-  unitTag: 
-  health: 0
+  tileAmount: 2
+  moveSpeed: 3
+  name: SzpitalZloty
+  playerNumber: 1
+  value: 20
+  attackDamage: 0
+  chance: 100
+  health: 10
   armor: 0
-  attackRange: 0
+  attackRange: 3
   AttackIcon: {fileID: 3055889656280257218}
   healAmount: 5
   hasHealed: 0

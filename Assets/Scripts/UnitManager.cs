@@ -134,21 +134,18 @@ public class UnitManager : MonoBehaviour
             {
                 healer.Heal(clickedUnit);
             }
+            if (selectedUnit is IJoker joker)
+            {
+                joker.Block(clickedUnit);
+            }
         }
-
-        if (selectedUnit is IMassAtacker massAtacker)
-        {
-            var clickedUnit = TargetableUnits;
-           // massAtacker.MassAttack(TargetableUnits);
-        }
-
     }
 
     private static Unit GetNewClickedUnit()
     {
         Unit clickedUnit = null;
 
-        Collider2D collider = Physics2D.OverlapCircle(Camera.main.ScreenToWorldPoint(Input.mousePosition), 0.15f);
+        Collider2D collider = Physics2D.OverlapCircle(Camera.main.ScreenToWorldPoint(Input.mousePosition), 0.20f);
 
         if (collider != null)
         {

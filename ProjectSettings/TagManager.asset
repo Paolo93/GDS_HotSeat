@@ -8,6 +8,12 @@ TagManager:
   - plant
   - water
   - fire
+  - porazajacy
+  - specjalny
+  - podniebny
+  - uziemiajacy
+  - pancerny
+  - przebijajacy
   layers:
   - Default
   - TransparentFX

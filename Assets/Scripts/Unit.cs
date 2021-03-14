@@ -9,12 +9,14 @@ public class Unit : MonoBehaviour
 
     //[HideInInspector]
     public bool hasMoved;
+    public bool isBlocked = false;
 
     [Tooltip("Amount of tiles to walk")] public int tileAmount;
     [Tooltip("Speed of unit")] public float moveSpeed;
 
+    public string name;
     public int playerNumber;
-    public string unitTag;
+    public int value;
 
     [Space(10)]
     [Header("Unit Stats Battle")]
@@ -107,14 +109,19 @@ public class Unit : MonoBehaviour
         gameManager.ResetTiles();
         float distance = Vector2.Distance(transform.position, tilePosition.position);
 
-        Sequence moveUnitSequence = DOTween.Sequence();
-        moveUnitSequence.Append(transform.DOMoveX(tilePosition.position.x, distance / moveSpeed));
-        moveUnitSequence.Append(transform.DOMoveY(tilePosition.position.y, distance / moveSpeed));
-        moveUnitSequence.AppendCallback(() =>
+       
+        if(!isBlocked)
         {
-            hasMoved = true;
-            unitManager.RefreshSelectedUnitTargets();
-        });
+            Sequence moveUnitSequence = DOTween.Sequence();
+            moveUnitSequence.Append(transform.DOMoveX(tilePosition.position.x, distance / moveSpeed));
+            moveUnitSequence.Append(transform.DOMoveY(tilePosition.position.y, distance / moveSpeed));
+            moveUnitSequence.AppendCallback(() =>
+            {
+                hasMoved = true;
+                unitManager.RefreshSelectedUnitTargets();
+            });
+        }
+        
 
         DisableAttackIcon();
 
