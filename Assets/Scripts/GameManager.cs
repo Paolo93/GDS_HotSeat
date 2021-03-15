@@ -79,20 +79,20 @@ public class GameManager : MonoBehaviour
    
     public void UpdateStatsPanel()
     {
-         healthTxt.text = activeUnit.health.ToString();
-         attackDamageTxt.text = activeUnit.attackDamage.ToString();
-         armorTxt.text = activeUnit.armor.ToString();
-         attackRangeTxt.text = activeUnit.attackRange.ToString();
-         chanceTxt.text = activeUnit.chance.ToString();
+         healthTxt.text = "Hp " + activeUnit.health.ToString();
+         attackDamageTxt.text = "Dmg " + activeUnit.attackDamage.ToString();
+         armorTxt.text = "Armor " + activeUnit.armor.ToString();
+         attackRangeTxt.text = "Range " + activeUnit.attackRange.ToString();
+         chanceTxt.text = "Chance " + activeUnit.chance.ToString();
     }
 
     public void UpdateStatsPanel2()
     {
-         healthTxt2.text = activeUnit.health.ToString();
-         attackDamageTxt2.text = activeUnit.attackDamage.ToString();
-         armorTxt2.text = activeUnit.armor.ToString();
-         attackRangeTxt2.text = activeUnit.attackRange.ToString();
-         chanceTxt2.text = activeUnit.chance.ToString();
+         healthTxt2.text = "Hp " + activeUnit.health.ToString();
+         attackDamageTxt2.text = "Dmg " + activeUnit.attackDamage.ToString();
+         armorTxt2.text = "Armor " + activeUnit.armor.ToString();
+         attackRangeTxt2.text = "Range " + activeUnit.attackRange.ToString();
+         chanceTxt2.text = "Chance " + activeUnit.chance.ToString();
     }
 
     public void UpdateTurn()
