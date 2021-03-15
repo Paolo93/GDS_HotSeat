@@ -39,10 +39,9 @@ public class GameManager : MonoBehaviour
             return numberOfTurn;
         }
     }
-
+    //add score after kill enemy
     public void AddScore(int player, int value)
     {
-        
         player = activeUnit.playerNumber;
         if(player == 1)
         {

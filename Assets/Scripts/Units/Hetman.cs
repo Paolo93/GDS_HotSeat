@@ -1,37 +1,38 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
 using System.Linq;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Joker : Soldier, IJoker
+public class Hetman : Soldier, IHetman
 {
-    public bool hasAttackBlocked = false;
+    public bool hasMoveBlocked = false;
 
-    public void BlockAttack(Unit enemy)
+    public void BlockMove(Unit enemy)
     {
         var getTurn = gameManager.NumberOfTurn;
-        var getNextTurn = gameManager.NumberOfTurn+2;
+        var getNextTurn = gameManager.NumberOfTurn + 2;
 
 
         if (AttackableUnits().Contains(enemy))
         {
             Debug.Log($"{this.name} blocked {enemy.name}");
-            hasAttackBlocked = true;
+            hasMoveBlocked = true;
             hasMoved = true;
-            enemy.isAttackBlocked = true;
+            enemy.isMoveBlocked = true;
             gameManager.ResetTiles();
             gameManager.UpdateStatsPanel();
         }
         /*
         while(getTurn <= getNextTurn)
         {
-            enemy.isAttackBlocked = false;
+            enemy.isMoveBlocked = false;
         }
         */
     }
 
-    public List<Unit> BlockableAttackUnits()
+    public List<Unit> BlockableMoveUnits()
     {
-        if (hasAttackBlocked)
+        if (hasMoveBlocked)
         {
             Debug.Log($"{this.name} has already blocked");
             return new List<Unit>();
@@ -42,9 +43,8 @@ public class Joker : Soldier, IJoker
         }
     }
 
-    public void ResetHasAttackBlocked()
+    public void ResetHasMoveBlocked()
     {
         hasAttacked = false;
     }
-
 }

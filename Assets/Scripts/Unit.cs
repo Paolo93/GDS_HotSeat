@@ -9,7 +9,8 @@ public class Unit : MonoBehaviour
 
     //[HideInInspector]
     public bool hasMoved;
-    public bool isBlocked = false;
+    public bool isAttackBlocked = false;
+    public bool isMoveBlocked = false;
 
     [Tooltip("Amount of tiles to walk")] public int tileAmount;
     [Tooltip("Speed of unit")] public float moveSpeed;
@@ -110,7 +111,7 @@ public class Unit : MonoBehaviour
         float distance = Vector2.Distance(transform.position, tilePosition.position);
 
        
-        if(!isBlocked)
+        if(!isMoveBlocked)
         {
             Sequence moveUnitSequence = DOTween.Sequence();
             moveUnitSequence.Append(transform.DOMoveX(tilePosition.position.x, distance / moveSpeed));
@@ -149,6 +150,14 @@ public class Unit : MonoBehaviour
         if (this is IAttacker attacker)
         {
             attacker.ResetHasAttacked();
+        }
+        if (this is IJoker joker)
+        {
+            joker.ResetHasAttackBlocked();
+        }
+        if (this is IHetman hetman)
+        {
+            hetman.ResetHasMoveBlocked();
         }
     }
 

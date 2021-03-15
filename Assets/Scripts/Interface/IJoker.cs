@@ -4,9 +4,9 @@ using UnityEngine;
 
 public interface IJoker
 {
-    void Block(Unit target);
+    void BlockAttack(Unit target);
 
-    List<Unit> BlockableUnits();
+    List<Unit> BlockableAttackUnits();
 
-    void ResetHasBlocked();
+    void ResetHasAttackBlocked();
 }

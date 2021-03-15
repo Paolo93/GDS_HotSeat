@@ -118,7 +118,7 @@ public class UnitManager : MonoBehaviour
 
     private void Attack(Unit clickedUnit)
     {
-        if (selectedUnit is IAttacker attacker)
+        if (selectedUnit is IAttacker attacker && !clickedUnit.isAttackBlocked)
         {
             attacker.Attack(clickedUnit);
         }
@@ -136,7 +136,11 @@ public class UnitManager : MonoBehaviour
             }
             if (selectedUnit is IJoker joker)
             {
-                joker.Block(clickedUnit);
+                joker.BlockAttack(clickedUnit);
+            }
+            if (selectedUnit is IHetman hetman)
+            {
+                hetman.BlockMove(clickedUnit);
             }
         }
     }
