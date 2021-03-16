@@ -61,12 +61,12 @@ public class GameManager : MonoBehaviour
             if(activeUnit.playerNumber == 1)
             {
                 statsPanel.SetActive(true);
-                UpdateStatsPanel();
+                UpdateStatsPanelLeft();
             }
             else
             {
                 statsPanel2.SetActive(true);
-                UpdateStatsPanel2();
+                UpdateStatsPanelRight();
             }
         }
         else
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
         }
     }
    
-    public void UpdateStatsPanel()
+    public void UpdateStatsPanelLeft()
     {
          healthTxt.text = "Hp " + activeUnit.health.ToString();
          attackDamageTxt.text = "Dmg " + activeUnit.attackDamage.ToString();
@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
          chanceTxt.text = "Chance " + activeUnit.chance.ToString();
     }
 
-    public void UpdateStatsPanel2()
+    public void UpdateStatsPanelRight()
     {
          healthTxt2.text = "Hp " + activeUnit.health.ToString();
          attackDamageTxt2.text = "Dmg " + activeUnit.attackDamage.ToString();

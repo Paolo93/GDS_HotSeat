@@ -47,7 +47,8 @@ public class Soldier : Unit, IAttacker
                 DestroyUnit(this);
             }
 
-            gameManager.UpdateStatsPanel();
+            gameManager.UpdateStatsPanelLeft();
+            gameManager.UpdateStatsPanelRight();
             unitManager.RefreshSelectedUnitTargets();
         }
     }

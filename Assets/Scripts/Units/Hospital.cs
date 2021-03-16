@@ -17,8 +17,9 @@ public class Hospital : Unit, IHealer
 			hasMoved = true;
 			gameManager.ResetTiles();
 			target.health += healAmount;
-			gameManager.UpdateStatsPanel();
-		}
+            gameManager.UpdateStatsPanelLeft();
+            gameManager.UpdateStatsPanelRight();
+        }
 	}
 
 	public List<Unit> HealableUnits()

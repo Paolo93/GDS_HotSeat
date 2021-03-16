@@ -19,7 +19,8 @@ public class Joker : Soldier, IJoker
             hasMoved = true;
             enemy.isAttackBlocked = true;
             gameManager.ResetTiles();
-            gameManager.UpdateStatsPanel();
+            gameManager.UpdateStatsPanelLeft();
+            gameManager.UpdateStatsPanelRight();
         }
         /*
         while(getTurn <= getNextTurn)

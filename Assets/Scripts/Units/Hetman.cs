@@ -20,7 +20,8 @@ public class Hetman : Soldier, IHetman
             hasMoved = true;
             enemy.isMoveBlocked = true;
             gameManager.ResetTiles();
-            gameManager.UpdateStatsPanel();
+            gameManager.UpdateStatsPanelLeft();
+            gameManager.UpdateStatsPanelRight();
         }
         /*
         while(getTurn <= getNextTurn)
