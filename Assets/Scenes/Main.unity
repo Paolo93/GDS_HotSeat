@@ -6898,8 +6898,8 @@ MonoBehaviour:
   numberOfTurn: 0
   playerTurn: 1
   numberOfTurnTxt: {fileID: 406615792}
-  scorePlayerOneTxt: {fileID: 0}
-  scorePlayerTwoTxt: {fileID: 0}
+  scorePlayerOneTxt: {fileID: 1746166705}
+  scorePlayerTwoTxt: {fileID: 301468049}
   healthTxt: {fileID: 901358620}
   healthTxt2: {fileID: 1026863576}
   attackDamageTxt: {fileID: 439787171}

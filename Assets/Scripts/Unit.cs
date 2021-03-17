@@ -7,9 +7,11 @@ using DG.Tweening;
 public class Unit : MonoBehaviour
 {
 
-    //[HideInInspector]
+    [HideInInspector]
     public bool hasMoved;
+    [HideInInspector]
     public bool isAttackBlocked = false;
+    [HideInInspector]
     public bool isMoveBlocked = false;
 
     [Tooltip("Amount of tiles to walk")] public int tileAmount;
@@ -107,12 +109,13 @@ public class Unit : MonoBehaviour
 
     public void Move(Transform tilePosition)
     {
-        gameManager.ResetTiles();
+        if (!isMoveBlocked)
+        {
+            gameManager.ResetTiles();
         float distance = Vector2.Distance(transform.position, tilePosition.position);
 
        
-        if(!isMoveBlocked)
-        {
+        
             Sequence moveUnitSequence = DOTween.Sequence();
             moveUnitSequence.Append(transform.DOMoveX(tilePosition.position.x, distance / moveSpeed));
             moveUnitSequence.Append(transform.DOMoveY(tilePosition.position.y, distance / moveSpeed));
@@ -121,11 +124,9 @@ public class Unit : MonoBehaviour
                 hasMoved = true;
                 unitManager.RefreshSelectedUnitTargets();
             });
-        }
-        
 
         DisableAttackIcon();
-
+        }
     }
 
     public void OnMouseEnter()

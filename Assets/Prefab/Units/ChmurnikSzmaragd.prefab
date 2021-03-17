@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3091956734129224808}
   - component: {fileID: 831052307984486974}
   m_Layer: 10
-  m_Name: SzybkiZloty
+  m_Name: ChmurnikSzmaragd
   m_TagString: plant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,10 +123,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasMoved: 0
+  isAttackBlocked: 0
+  isMoveBlocked: 0
   tileAmount: 0
   moveSpeed: 0
-  name: 
-  playerNumber: 0
+  name: ChmurnikSzmaragd
+  playerNumber: 2
   value: 10
   attackDamage: 0
   chance: 0

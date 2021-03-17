@@ -39,7 +39,8 @@ public class Soldier : Unit, IAttacker
                 DestroyUnit(enemy);
                 GetWalkablePaths();
                 gameManager.RemoveStatsPanel(enemy);
-               
+                gameManager.AddScore(enemy.playerNumber, enemy.value);
+                Debug.Log($"{this.name} Killed {enemy.name}");
             }
 
             if (health <= 0)

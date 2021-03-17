@@ -24,11 +24,11 @@ public class Hetman : Soldier, IHetman
             gameManager.UpdateStatsPanelRight();
         }
         /*
-        while(getTurn <= getNextTurn)
+        while(getTurn == getNextTurn)
         {
             enemy.isMoveBlocked = false;
         }
-        */
+       */
     }
 
     public List<Unit> BlockableMoveUnits()
