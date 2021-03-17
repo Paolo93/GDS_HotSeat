@@ -38,7 +38,8 @@ public class Soldier : Unit, IAttacker
             {
                 DestroyUnit(enemy);
                 GetWalkablePaths();
-               // gameManager.AddScore(playerNumber, enemy.value);
+                gameManager.RemoveStatsPanel(enemy);
+               
             }
 
             if (health <= 0)

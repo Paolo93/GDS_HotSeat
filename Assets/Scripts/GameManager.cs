@@ -63,13 +63,13 @@ public class GameManager : MonoBehaviour
                 statsPanel.SetActive(true);
                 UpdateStatsPanelLeft();
             }
-            else
+            else if(activeUnit.playerNumber == 2)
             {
                 statsPanel2.SetActive(true);
                 UpdateStatsPanelRight();
             }
         }
-        else
+        else 
         {
             statsPanel.SetActive(false);
             statsPanel2.SetActive(false);
@@ -79,20 +79,20 @@ public class GameManager : MonoBehaviour
    
     public void UpdateStatsPanelLeft()
     {
-         healthTxt.text = "Hp " + activeUnit.health.ToString();
-         attackDamageTxt.text = "Dmg " + activeUnit.attackDamage.ToString();
-         armorTxt.text = "Armor " + activeUnit.armor.ToString();
-         attackRangeTxt.text = "Range " + activeUnit.attackRange.ToString();
-         chanceTxt.text = "Chance " + activeUnit.chance.ToString();
+        if(activeUnit) healthTxt.text = "Hp " + activeUnit.health.ToString();
+        if (activeUnit) attackDamageTxt.text = "Dmg " + activeUnit.attackDamage.ToString();
+        if (activeUnit) armorTxt.text = "Armor " + activeUnit.armor.ToString();
+        if (activeUnit) attackRangeTxt.text = "Range " + activeUnit.attackRange.ToString();
+        if (activeUnit) chanceTxt.text = "Chance " + activeUnit.chance.ToString();
     }
 
     public void UpdateStatsPanelRight()
     {
-         healthTxt2.text = "Hp " + activeUnit.health.ToString();
-         attackDamageTxt2.text = "Dmg " + activeUnit.attackDamage.ToString();
-         armorTxt2.text = "Armor " + activeUnit.armor.ToString();
-         attackRangeTxt2.text = "Range " + activeUnit.attackRange.ToString();
-         chanceTxt2.text = "Chance " + activeUnit.chance.ToString();
+        if (activeUnit) healthTxt2.text = "Hp " + activeUnit.health.ToString();
+        if (activeUnit) attackDamageTxt2.text = "Dmg " + activeUnit.attackDamage.ToString();
+        if (activeUnit) armorTxt2.text = "Armor " + activeUnit.armor.ToString();
+        if (activeUnit) attackRangeTxt2.text = "Range " + activeUnit.attackRange.ToString();
+        if (activeUnit) chanceTxt2.text = "Chance " + activeUnit.chance.ToString();
     }
 
     public void UpdateTurn()
