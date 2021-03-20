@@ -11,8 +11,9 @@ public class Unit : MonoBehaviour
     public bool hasMoved;
     [HideInInspector]
     public bool isAttackBlocked = false;
-    [HideInInspector]
+    //[HideInInspector]
     public bool isMoveBlocked = false;
+    public int restTurnOfDebuff;
 
     [Tooltip("Amount of tiles to walk")] public int tileAmount;
     [Tooltip("Speed of unit")] public float moveSpeed;
@@ -138,7 +139,7 @@ public class Unit : MonoBehaviour
     {
         gameManager.RemoveStatsPanel(this);
     }
-
+  
     public void ResetState()
     {
         hasMoved = false;
@@ -159,6 +160,10 @@ public class Unit : MonoBehaviour
         if (this is IHetman hetman)
         {
             hetman.ResetHasMoveBlocked();
+        }
+        if (this is IBoomber boomber)
+        {
+            boomber.ResetHasMassAtacked();
         }
     }
 

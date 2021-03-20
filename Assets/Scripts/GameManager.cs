@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public int playerTurn = 1;
 
     public Text numberOfTurnTxt;
+    public Text messageToShow;
 
     [Space(10)]
     public Text scorePlayerOneTxt, scorePlayerTwoTxt;
@@ -79,6 +80,11 @@ public class GameManager : MonoBehaviour
             activeUnit = null;
         }
     }
+
+    public void ShowMessage(string message)
+    {
+        messageToShow.text = message.ToString();
+    }
    
     public void UpdateStatsPanelLeft()
     {
@@ -141,10 +147,20 @@ public class GameManager : MonoBehaviour
         {
             playerTurn = 1;
             UpdateTurn();
+            foreach (Unit units in FindObjectsOfType<Unit>())
+            {
+                if (units.isMoveBlocked)
+                {
+                    units.restTurnOfDebuff -= 1;
+                }
+                if(units.restTurnOfDebuff <= 0)
+                {
+                    units.isMoveBlocked = false;
+                }
+            }
         }
 
         UnitManager.DeselectUnit();
-
         ResetTiles();
 
         foreach (Unit units in FindObjectsOfType<Unit>())

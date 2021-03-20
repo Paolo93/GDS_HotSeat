@@ -16,19 +16,20 @@ public class Hetman : Soldier, IHetman
         if (AttackableUnits().Contains(enemy))
         {
             Debug.Log($"{this.name} blocked {enemy.name}");
-            hasMoveBlocked = true;
-            hasMoved = true;
-            enemy.isMoveBlocked = true;
-            gameManager.ResetTiles();
-            gameManager.UpdateStatsPanelLeft();
-            gameManager.UpdateStatsPanelRight();
+            
+            //enemy.isMoveBlocked = true;
+            
+            if(enemy.isMoveBlocked == false)
+            {
+                gameManager.ResetTiles();
+                gameManager.UpdateStatsPanelLeft();
+                gameManager.UpdateStatsPanelRight();
+                hasMoveBlocked = true;
+                hasMoved = true;
+                enemy.isMoveBlocked = true;
+                enemy.restTurnOfDebuff = 2;
+            }
         }
-        /*
-        while(getTurn == getNextTurn)
-        {
-            enemy.isMoveBlocked = false;
-        }
-       */
     }
 
     public List<Unit> BlockableMoveUnits()

@@ -142,6 +142,10 @@ public class UnitManager : MonoBehaviour
             {
                 hetman.BlockMove(clickedUnit);
             }
+            if (selectedUnit is IBoomber boomber)
+            {
+                //boomber.MassAttack(clickedUnit);
+            }
         }
     }
 
