@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2538710101d0f1f4e8976b3495cd1f75, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.87058824}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -121,10 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7e343d518da4b04bb0afc68892d007d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiles: []
   obstacles:
     serializedVersion: 2
     m_Bits: 1024
-  hoverAmount: 0.1
+  hoverTile: 0
   colorMove: {r: 0.050062295, g: 0.22539143, b: 0.7075472, a: 0.64705884}
-  isWalkable: 0

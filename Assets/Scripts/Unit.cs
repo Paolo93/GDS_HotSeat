@@ -44,7 +44,7 @@ public class Unit : MonoBehaviour
     {
         if (hasMoved)
         {
-            Debug.Log($"Unit {this.name} already moved");
+            //Debug.Log($"Unit {this.name} already moved");     
             return;
         }
 
@@ -115,8 +115,15 @@ public class Unit : MonoBehaviour
             gameManager.ResetTiles();
         float distance = Vector2.Distance(transform.position, tilePosition.position);
 
-       
-        
+            if (Random.Range(0, 6) < 3)
+            {
+                gameManager.ShowMessage($"Lece kapitanie");
+            }
+            else
+            {
+                gameManager.ShowMessage($"Do boju kapitanie");
+            }
+
             Sequence moveUnitSequence = DOTween.Sequence();
             moveUnitSequence.Append(transform.DOMoveX(tilePosition.position.x, distance / moveSpeed));
             moveUnitSequence.Append(transform.DOMoveY(tilePosition.position.y, distance / moveSpeed));
@@ -127,6 +134,10 @@ public class Unit : MonoBehaviour
             });
 
         DisableAttackIcon();
+        }
+        else
+        {
+            gameManager.ShowMessage($"Kapitanie, nie  moge sie ruszyc");
         }
     }
 

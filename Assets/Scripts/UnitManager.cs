@@ -38,8 +38,9 @@ public class UnitManager : MonoBehaviour
     public void SelectUnit(Unit unit)
     {
         Debug.Log($"Selected: {unit.name}");
+        GameManager.ShowMessage($"{unit.name}, melduje sie do gotowości");
 
-        if(selectedUnit != null) { DeselectUnit(); }
+        if (selectedUnit != null) { DeselectUnit(); }
 
         ClearTargetableUnits();
 
@@ -72,7 +73,7 @@ public class UnitManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("LMB clicked");
+            //Debug.Log("LMB clicked");
             var clickedUnit = GetNewClickedUnit();
 
             if (selectedUnit != null && selectedUnit == clickedUnit) //we clicked on already selected unit
@@ -111,7 +112,7 @@ public class UnitManager : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(1)) //special Attack
         {
-            Debug.Log("RMB clicked");
+            //Debug.Log("RMB clicked");
             CastSpecialAttack();
         }
     }

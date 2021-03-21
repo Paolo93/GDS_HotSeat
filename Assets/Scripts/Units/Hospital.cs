@@ -12,7 +12,7 @@ public class Hospital : Unit, IHealer
 	{
 		if (HealableUnits().Contains(target))
 		{
-			Debug.Log($"{this.name} healed {target.name}");
+			Debug.Log($"{target.name} uleczony, zdrowiej");
 			hasHealed = true;
 			hasMoved = true;
 			gameManager.ResetTiles();

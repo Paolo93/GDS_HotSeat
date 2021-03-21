@@ -27,7 +27,7 @@ public class Soldier : Unit, IAttacker
             if (Random.Range(0, 100) < chance)
             {
                 enemy.health -= myDamage;
-                gameManager.ShowMessage($"{this.name} hit {enemy.name}");
+                gameManager.ShowMessage($"{enemy.name} Dostał !!");
                 //Debug.Log($"{this.name} hit {enemy.name}");
             }
             else
@@ -41,7 +41,7 @@ public class Soldier : Unit, IAttacker
                 GetWalkablePaths();
                 gameManager.RemoveStatsPanel(enemy);
                 gameManager.AddScore(enemy.playerNumber, enemy.value);
-                gameManager.ShowMessage($"{this.name} killed {enemy.name}");
+                gameManager.ShowMessage($"Haa! zabilem {enemy.name}");
                 //Debug.Log($"{this.name} killed {enemy.name}");
             }
 
@@ -61,7 +61,7 @@ public class Soldier : Unit, IAttacker
     {
         if (hasAttacked)
         {
-            gameManager.ShowMessage($"{this.name} has already attacked");
+            //gameManager.ShowMessage($"{this.name} has already attacked");
             //Debug.Log($"{this.name} has already attacked");
             return new List<Unit>();
         }

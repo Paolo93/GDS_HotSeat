@@ -20,12 +20,12 @@ public class Joker : Soldier, IJoker
                 hasAttacked = true;
                 enemy.isAttackBlocked = true;
                 enemy.restTurnOfDebuffAttack = 2;
-                gameManager.ShowMessage($"{this.name} blocked {enemy.name}");
+                gameManager.ShowMessage($"Kapitanie, {enemy.name} został zablokowany");
                 this.cooldown += 2;
             }
             else
             {
-                gameManager.ShowMessage($"I cant block this {enemy.name}");
+                gameManager.ShowMessage($"Nie moge zablokowac {enemy.name}");
             }
         }
     }

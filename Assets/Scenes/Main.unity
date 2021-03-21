@@ -12356,8 +12356,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 364, y: -461}
-  m_SizeDelta: {x: 318.83386, y: 25.40564}
+  m_AnchoredPosition: {x: 434.44, y: -494.15}
+  m_SizeDelta: {x: 459.71332, y: 91.70282}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1446144322
 MonoBehaviour:
@@ -12385,13 +12385,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Game has started
+  m_Text: Zloci rozpoczynaja
 --- !u!222 &1446144323
 CanvasRenderer:
   m_ObjectHideFlags: 0

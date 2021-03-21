@@ -100,7 +100,6 @@ public class GameManager : MonoBehaviour
             chanceTxt.text = "Chance " + activeUnit.chance.ToString();
             debuffMove.text = "Rest of Turn Debuff Move: " + activeUnit.restTurnOfDebuffMove.ToString();
             debuffAttack.text = "Rest of Turn Debuff Attack: " + activeUnit.restTurnOfDebuffAttack.ToString();
-
         }
 
     }
@@ -149,11 +148,13 @@ public class GameManager : MonoBehaviour
     {
         if (playerTurn == 1)
         {
-            playerTurn = 2; 
+            playerTurn = 2;
+            ShowMessage($"Czas na Szmaragdy");
         }
         else if (playerTurn == 2)
         {
             playerTurn = 1;
+            ShowMessage($"Zloci Do boju");
             UpdateTurn();
             foreach (Unit units in FindObjectsOfType<Unit>())
             {
