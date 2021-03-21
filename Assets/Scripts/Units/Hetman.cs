@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Linq;
+﻿using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,25 +8,23 @@ public class Hetman : Soldier, IHetman
 
     public void BlockMove(Unit enemy)
     {
-        var getTurn = gameManager.NumberOfTurn;
-        var getNextTurn = gameManager.NumberOfTurn + 2;
-
-
         if (AttackableUnits().Contains(enemy))
-        {
-            Debug.Log($"{this.name} blocked {enemy.name}");
-            
-            //enemy.isMoveBlocked = true;
-            
-            if(enemy.isMoveBlocked == false)
+        {    
+            if(enemy.isMoveBlocked == false && this.cooldown < 1)
             {
                 gameManager.ResetTiles();
                 gameManager.UpdateStatsPanelLeft();
                 gameManager.UpdateStatsPanelRight();
                 hasMoveBlocked = true;
                 hasMoved = true;
+                hasAttacked = true;
                 enemy.isMoveBlocked = true;
-                enemy.restTurnOfDebuff = 2;
+                enemy.restTurnOfDebuffMove = 2;
+                gameManager.ShowMessage($"{this.name} blocked {enemy.name}");
+                this.cooldown += 2;
+            } else
+            {
+                gameManager.ShowMessage($"I cant block this {enemy.name}");
             }
         }
     }
@@ -36,7 +33,7 @@ public class Hetman : Soldier, IHetman
     {
         if (hasMoveBlocked)
         {
-            Debug.Log($"{this.name} has already blocked");
+           // Debug.Log($"{this.name} has already blocked");
             return new List<Unit>();
         }
         else

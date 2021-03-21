@@ -11,24 +11,24 @@ public class Unit : MonoBehaviour
     public bool hasMoved;
     [HideInInspector]
     public bool isAttackBlocked = false;
-    //[HideInInspector]
+    [HideInInspector]
     public bool isMoveBlocked = false;
-    public int restTurnOfDebuff;
-
-    [Tooltip("Amount of tiles to walk")] public int tileAmount;
-    [Tooltip("Speed of unit")] public float moveSpeed;
+    public int restTurnOfDebuffMove, restTurnOfDebuffAttack;
+    public int cooldown;
 
     public string name;
     public int playerNumber;
-    public int value;
-
+    
     [Space(10)]
-    [Header("Unit Stats Battle")]
+    [Header("Stats for Designers")]
+    [Tooltip("Amount of tiles to walk")] public int tileAmount;
+    [Tooltip("Speed of unit")] public float moveSpeed;
     public int attackDamage;
     public int chance;
     public int health;
     public int armor;
     public int attackRange;
+    public int value;
 
     protected GameManager gameManager;
     protected UnitManager unitManager;

@@ -118,7 +118,7 @@ public class UnitManager : MonoBehaviour
 
     private void Attack(Unit clickedUnit)
     {
-        if (selectedUnit is IAttacker attacker && !clickedUnit.isAttackBlocked)
+        if (selectedUnit is IAttacker attacker && !selectedUnit.isAttackBlocked)
         {
             attacker.Attack(clickedUnit);
         }

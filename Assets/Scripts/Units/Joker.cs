@@ -8,26 +8,26 @@ public class Joker : Soldier, IJoker
 
     public void BlockAttack(Unit enemy)
     {
-        var getTurn = gameManager.NumberOfTurn;
-        var getNextTurn = gameManager.NumberOfTurn+2;
-
-
         if (AttackableUnits().Contains(enemy))
         {
-            Debug.Log($"{this.name} blocked {enemy.name}");
-            hasAttackBlocked = true;
-            hasMoved = true;
-            enemy.isAttackBlocked = true;
-            gameManager.ResetTiles();
-            gameManager.UpdateStatsPanelLeft();
-            gameManager.UpdateStatsPanelRight();
+            if(enemy.isAttackBlocked == false && this.cooldown < 1)
+            {
+                gameManager.ResetTiles();
+                gameManager.UpdateStatsPanelLeft();
+                gameManager.UpdateStatsPanelRight();
+                hasAttackBlocked = true;
+                hasMoved = true;
+                hasAttacked = true;
+                enemy.isAttackBlocked = true;
+                enemy.restTurnOfDebuffAttack = 2;
+                gameManager.ShowMessage($"{this.name} blocked {enemy.name}");
+                this.cooldown += 2;
+            }
+            else
+            {
+                gameManager.ShowMessage($"I cant block this {enemy.name}");
+            }
         }
-        /*
-        while(getTurn <= getNextTurn)
-        {
-            enemy.isAttackBlocked = false;
-        }
-        */
     }
 
     public List<Unit> BlockableAttackUnits()

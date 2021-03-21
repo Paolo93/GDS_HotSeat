@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     public Text attackRangeTxt, attackRangeTxt2;
     public Text chanceTxt, chanceTxt2;
 
+    public Text debuffMove, debuffMove2;
+    public Text debuffAttack, debuffAttack2;
+
     private UnitManager UnitManager;
 
     private void Start()
@@ -95,6 +98,9 @@ public class GameManager : MonoBehaviour
             armorTxt.text = "Armor " + activeUnit.armor.ToString();
             attackRangeTxt.text = "Range " + activeUnit.attackRange.ToString();
             chanceTxt.text = "Chance " + activeUnit.chance.ToString();
+            debuffMove.text = "Rest of Turn Debuff Move: " + activeUnit.restTurnOfDebuffMove.ToString();
+            debuffAttack.text = "Rest of Turn Debuff Attack: " + activeUnit.restTurnOfDebuffAttack.ToString();
+
         }
 
     }
@@ -108,6 +114,8 @@ public class GameManager : MonoBehaviour
             armorTxt2.text = "Armor " + activeUnit.armor.ToString();
             attackRangeTxt2.text = "Range " + activeUnit.attackRange.ToString();
             chanceTxt2.text = "Chance " + activeUnit.chance.ToString();
+            debuffMove2.text = "Rest of Turn Debuff Move: " + activeUnit.restTurnOfDebuffMove.ToString();
+            debuffAttack2.text = "Rest of Turn Debuff Attack: " + activeUnit.restTurnOfDebuffAttack.ToString();
         }
     }
 
@@ -151,11 +159,24 @@ public class GameManager : MonoBehaviour
             {
                 if (units.isMoveBlocked)
                 {
-                    units.restTurnOfDebuff -= 1;
+                    units.restTurnOfDebuffMove -= 1;
                 }
-                if(units.restTurnOfDebuff <= 0)
+                if(units.restTurnOfDebuffMove <= 0)
                 {
                     units.isMoveBlocked = false;
+                }
+                if (units.isAttackBlocked)
+                {
+                    units.restTurnOfDebuffAttack -= 1;
+                }
+                if (units.restTurnOfDebuffAttack <= 0)
+                {
+                    units.isAttackBlocked = false;
+                }
+                units.cooldown -= 1;
+                if (units.cooldown < 0)
+                {
+                    units.cooldown = 0;
                 }
             }
         }
