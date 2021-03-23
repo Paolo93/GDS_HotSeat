@@ -1,0 +1,536 @@
+fileFormatVersion: 2
+guid: 1fd6f4202ae315447bf67f9c1a3e9a47
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2017409903437369450
+    second: flota_powietrzna_do_poslania_0
+  - first:
+      213: 2262119170482683053
+    second: flota_powietrzna_do_poslania_1
+  - first:
+      213: 6661869987559667111
+    second: flota_powietrzna_do_poslania_3
+  - first:
+      213: 1022676177689481248
+    second: flota_powietrzna_do_poslania_4
+  - first:
+      213: 8263400363640731409
+    second: flota_powietrzna_do_poslania_5
+  - first:
+      213: 3737030920499738336
+    second: flota_powietrzna_do_poslania_6
+  - first:
+      213: 9159494317484139152
+    second: flota_powietrzna_do_poslania_7
+  - first:
+      213: 3822321054206282565
+    second: flota_powietrzna_do_poslania_8
+  - first:
+      213: 1103709289552626225
+    second: flota_powietrzna_do_poslania_9
+  - first:
+      213: 5261653668796982649
+    second: flota_powietrzna_do_poslania_10
+  - first:
+      213: 2526952818961327747
+    second: flota_powietrzna_do_poslania_11
+  - first:
+      213: 3330072686897296278
+    second: flota_powietrzna_do_poslania_12
+  - first:
+      213: -8997534343475755135
+    second: flota_powietrzna_do_poslania_13
+  - first:
+      213: -8248007434679239289
+    second: flota_powietrzna_do_poslania_14
+  - first:
+      213: 4271241877302561672
+    second: flota_powietrzna_do_poslania_15
+  - first:
+      213: 129829729952752029
+    second: flota_powietrzna_do_poslania_16
+  - first:
+      213: 7654359670427051146
+    second: flota_powietrzna_do_poslania_17
+  - first:
+      213: 3968012554422093772
+    second: flota_powietrzna_do_poslania_18
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 150
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_0
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 733
+        width: 104
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a605db45e974ffb10800000000000000
+      internalID: 2017409903437369450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_1
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 725
+        width: 144
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dacb83c7669a46f10800000000000000
+      internalID: 2262119170482683053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_3
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 735
+        width: 99
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a574542577b37c50800000000000000
+      internalID: 6661869987559667111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 648
+        width: 113
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0209f63b096413e00800000000000000
+      internalID: 1022676177689481248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_5
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 645
+        width: 112
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117b3af69de7da270800000000000000
+      internalID: 8263400363640731409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_6
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 510
+        width: 117
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e6b90392d99cd330800000000000000
+      internalID: 3737030920499738336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_7
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 504
+        width: 118
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 092e9db7d8f0d1f70800000000000000
+      internalID: 9159494317484139152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_8
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 513
+        width: 127
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54b467d4fbc9b0530800000000000000
+      internalID: 3822321054206282565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_9
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 387
+        width: 80
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132451b40c9215f00800000000000000
+      internalID: 1103709289552626225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_10
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 390
+        width: 81
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97566c36226250940800000000000000
+      internalID: 5261653668796982649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_11
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 291
+        width: 105
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 386ac52533a811320800000000000000
+      internalID: 2526952818961327747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_12
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 282
+        width: 121
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6937eba177bc63e20800000000000000
+      internalID: 3330072686897296278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_13
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 281
+        width: 118
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18700c28f26522380800000000000000
+      internalID: -8997534343475755135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_14
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 161
+        width: 131
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78db92f10f0398d80800000000000000
+      internalID: -8248007434679239289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_15
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 166
+        width: 133
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b446e7bdf764b30800000000000000
+      internalID: 4271241877302561672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_16
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 81
+        width: 109
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d916e17937f3dc100800000000000000
+      internalID: 129829729952752029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_17
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 18
+        width: 160
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8461e2d09fb93a60800000000000000
+      internalID: 7654359670427051146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flota_powietrzna_do_poslania_18
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 19
+        width: 149
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc78e921566311730800000000000000
+      internalID: 3968012554422093772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
