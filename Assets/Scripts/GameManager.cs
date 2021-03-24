@@ -184,11 +184,26 @@ public class GameManager : MonoBehaviour
 
         UnitManager.DeselectUnit();
         ResetTiles();
+        
 
         foreach (Unit units in FindObjectsOfType<Unit>())
         {
             units.ResetState();
             Unit.DisableAttackIcon();
+        }
+    }
+
+    public void VictoryScore()
+    {
+        if(scorePlayerOne > scorePlayerTwo)
+        {
+            //win team 1
+        } else if(scorePlayerOne < scorePlayerTwo)
+        {
+            // win team 2
+        } else
+        {
+            //remis
         }
     }
 }

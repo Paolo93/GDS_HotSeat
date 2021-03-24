@@ -8,7 +8,7 @@ public class Joker : Soldier, IJoker
 
     public void BlockAttack(Unit enemy)
     {
-        if (AttackableUnits().Contains(enemy))
+        if (BlockableAttackUnits().Contains(enemy))
         {
             if(enemy.isAttackBlocked == false && this.cooldown < 1)
             {

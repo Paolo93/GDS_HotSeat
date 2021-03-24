@@ -8,7 +8,7 @@ public class Hetman : Soldier, IHetman
 
     public void BlockMove(Unit enemy)
     {
-        if (AttackableUnits().Contains(enemy))
+        if (BlockableMoveUnits().Contains(enemy))
         {    
             if(enemy.isMoveBlocked == false && this.cooldown < 1)
             {

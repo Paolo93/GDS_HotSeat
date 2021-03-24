@@ -47,6 +47,10 @@ public class Soldier : Unit, IAttacker
 
             if (health <= 0)
             {
+                if(isKing == true)
+                {
+                    //victory
+                }
                 gameManager.ResetTiles();
                 DestroyUnit(this);
             }

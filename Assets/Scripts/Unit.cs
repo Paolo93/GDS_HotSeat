@@ -13,7 +13,10 @@ public class Unit : MonoBehaviour
     public bool isAttackBlocked = false;
     [HideInInspector]
     public bool isMoveBlocked = false;
+    [HideInInspector]
     public int restTurnOfDebuffMove, restTurnOfDebuffAttack;
+
+    public bool isKing;
     public int cooldown;
 
     public string name;
@@ -73,6 +76,16 @@ public class Unit : MonoBehaviour
     protected IEnumerable<Unit> EnemyUnitsInRange()
     {
         return UnitsInRange().Where(x => x.playerNumber != gameManager.playerTurn);// select my enemies
+    }
+
+    protected IEnumerable<Unit> UnitPlayerOne()
+    {
+        return UnitsInRange().Where(x => x.playerNumber == 1);
+    }
+
+    protected IEnumerable<Unit> UnitPlayerTwo()
+    {
+        return UnitsInRange().Where(x => x.playerNumber == 2);
     }
 
     protected IEnumerable<Unit> UnitsInRange()
