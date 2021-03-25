@@ -78,16 +78,6 @@ public class Unit : MonoBehaviour
         return UnitsInRange().Where(x => x.playerNumber != gameManager.playerTurn);// select my enemies
     }
 
-    protected IEnumerable<Unit> UnitPlayerOne()
-    {
-        return UnitsInRange().Where(x => x.playerNumber == 1);
-    }
-
-    protected IEnumerable<Unit> UnitPlayerTwo()
-    {
-        return UnitsInRange().Where(x => x.playerNumber == 2);
-    }
-
     protected IEnumerable<Unit> UnitsInRange()
     {
         return FindObjectsOfType<Unit>().Where(x => TargetInAttackRange(x.transform)); // select general unit

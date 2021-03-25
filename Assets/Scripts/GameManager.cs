@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -16,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public Text numberOfTurnTxt;
     public Text messageToShow;
+    public Text winText;
+    [SerializeField] GameObject panelWin;
 
     [Space(10)]
     public Text scorePlayerOneTxt, scorePlayerTwoTxt;
@@ -181,7 +184,7 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-
+ 
         UnitManager.DeselectUnit();
         ResetTiles();
         
@@ -197,13 +200,25 @@ public class GameManager : MonoBehaviour
     {
         if(scorePlayerOne > scorePlayerTwo)
         {
-            //win team 1
-        } else if(scorePlayerOne < scorePlayerTwo)
-        {
-            // win team 2
-        } else
-        {
-            //remis
+            ShowMessage($"Zloci Wygrali");
+            KingDeath("Zloci Wygrali");
         }
+        else if(scorePlayerOne < scorePlayerTwo)
+        {
+            ShowMessage($"Szmaragdzi Wygrali");
+            KingDeath("Szmaragdzi Wygrali");
+        }
+        else
+        {
+            ShowMessage($"Remis");
+            KingDeath("Remis");
+        }
+        panelWin.SetActive(true);
+    }
+
+    public void KingDeath(string winnerTeam)
+    {
+        winText.text = winnerTeam.ToString();
+        panelWin.SetActive(true);
     }
 }

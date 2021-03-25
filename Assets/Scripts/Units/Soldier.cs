@@ -42,15 +42,21 @@ public class Soldier : Unit, IAttacker
                 gameManager.RemoveStatsPanel(enemy);
                 gameManager.AddScore(enemy.playerNumber, enemy.value);
                 gameManager.ShowMessage($"Haa! zabilem {enemy.name}");
-                //Debug.Log($"{this.name} killed {enemy.name}");
+                if (isKing == true && playerNumber == 1)
+                {
+                    gameManager.KingDeath("Krol Szmaragdow zostal pokonany, Zloci wygrali");
+                    Time.timeScale = 0;
+                }
+                else if (isKing == true && playerNumber == 2)
+                {
+                    gameManager.KingDeath("Krol Zlotych zostal pokonany, Szmaragdy wygraly");
+                    Time.timeScale = 0;
+                }
             }
 
             if (health <= 0)
             {
-                if(isKing == true)
-                {
-                    //victory
-                }
+
                 gameManager.ResetTiles();
                 DestroyUnit(this);
             }
