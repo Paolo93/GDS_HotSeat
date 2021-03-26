@@ -36,6 +36,7 @@ public class Unit : MonoBehaviour
     protected GameManager gameManager;
     protected UnitManager unitManager;
     public GameObject AttackIcon;
+    public GameObject designIcon;
 
     void Start()
     {

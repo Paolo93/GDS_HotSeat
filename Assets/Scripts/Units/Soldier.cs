@@ -45,12 +45,12 @@ public class Soldier : Unit, IAttacker
                 if (isKing == true && playerNumber == 1)
                 {
                     gameManager.KingDeath("Krol Szmaragdow zostal pokonany, Zloci wygrali");
-                    Time.timeScale = 0;
+                    Time.timeScale = 0f;
                 }
                 else if (isKing == true && playerNumber == 2)
                 {
                     gameManager.KingDeath("Krol Zlotych zostal pokonany, Szmaragdy wygraly");
-                    Time.timeScale = 0;
+                    Time.timeScale = 0f;
                 }
             }
 

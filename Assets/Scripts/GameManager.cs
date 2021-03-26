@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public int numberOfTurn = 0;
     public int playerTurn = 1;
+    [HideInInspector]
+    public static bool isDesignMode = false;
 
     public Text numberOfTurnTxt;
     public Text messageToShow;
@@ -221,4 +223,27 @@ public class GameManager : MonoBehaviour
         winText.text = winnerTeam.ToString();
         panelWin.SetActive(true);
     }
+
+    public void ChangeDesignMode()
+    {
+        if (!isDesignMode)
+        {
+            foreach (Unit units in FindObjectsOfType<Unit>())
+            {
+                if(units.designIcon) units.designIcon.SetActive(true);
+                units.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            }
+            isDesignMode = true;
+        }
+        else if(isDesignMode)
+        {
+            foreach (Unit units in FindObjectsOfType<Unit>())
+            {
+                if (units.designIcon) units.designIcon.SetActive(false);
+                units.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+            }
+            isDesignMode = false;
+        }
+    }
+
 }

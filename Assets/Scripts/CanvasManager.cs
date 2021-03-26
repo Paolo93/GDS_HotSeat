@@ -10,6 +10,7 @@ public class CanvasManager : MonoBehaviour
     public Button SwitchTurn;
     public Button Play;
     public Button MenuBtn;
+    public Button SwitchGameMode;
     private GameManager gameManager;
 
     public Animator transition;
@@ -21,7 +22,7 @@ public class CanvasManager : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
         if(SwitchTurn) SwitchTurn.onClick.AddListener(gameManager.Switch);
         if(MenuBtn) MenuBtn.onClick.AddListener(GoToMenu);
-
+        if (SwitchGameMode) SwitchGameMode.onClick.AddListener(gameManager.ChangeDesignMode);
         if (Play) Play.onClick.AddListener(LoadGame);
 
     }
@@ -33,7 +34,8 @@ public class CanvasManager : MonoBehaviour
 
     public void GoToMenu()
     {
-        StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex - 1));
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
     }
 
 
