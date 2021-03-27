@@ -1010,6 +1010,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1466228113}
     m_Modifications:
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: health
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 831052307984486974, guid: e10b67bb92122544d90ce59aa6335b90,
+        type: 3}
+      propertyPath: attackDamage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2721188256783041093, guid: e10b67bb92122544d90ce59aa6335b90,
         type: 3}
       propertyPath: m_SizeDelta.x

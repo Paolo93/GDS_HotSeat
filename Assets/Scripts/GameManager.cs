@@ -97,7 +97,13 @@ public class GameManager : MonoBehaviour
    
     public void UpdateStatsPanelLeft()
     {
- 
+        if (UnitManager.selectedUnit && UnitManager.selectedUnit.playerNumber == 2 && activeUnit)
+        {
+            var myAttack = UnitManager.selectedUnit.attackDamage;
+            var enemyHealth = activeUnit.health + activeUnit.armor;
+            var score = enemyHealth - myAttack;
+            Debug.Log(score);
+        }
         if (activeUnit)
         {
             healthTxt.text = "Hp " + activeUnit.health.ToString();
@@ -113,8 +119,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateStatsPanelRight()
     {
-        
-        if (UnitManager.selectedUnit && UnitManager.selectedUnit.playerNumber == 1)
+        if (UnitManager.selectedUnit && UnitManager.selectedUnit.playerNumber == 1 && activeUnit)
         {
             var myAttack = UnitManager.selectedUnit.attackDamage;
             var enemyHealth = activeUnit.health + activeUnit.armor;

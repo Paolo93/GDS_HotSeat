@@ -34,16 +34,4 @@ public class Messages : MonoBehaviour
         //zablokowali mi atak
     };
 
-    //ShowMessage($"Czas na Szmaragdy"); - zmiana tury na Szmaragdy
-    // ShowMessage($"Do boju Zloci"); - zmiana tury na Zlotych
-    // uleczony, zdrowiej - po uleczeniu przez lecznice
-
-    //$"{enemy.name} Dostał za np 50 dmg
-
-    // Dla  zablokowania ruchu i ataku
-    // Nie moge zablokowac {enemy.name}" - gdy nie moge zablokowac jednostki bo ma juz blokade
-    // Kapitanie, {enemy.name} został zablokowany" - gdy nie moge zablokowac jednostki bo ma juz blokade
-    //Krol Szmaragdow zostal pokonany, Zloci wygrali
-    //Krol Zlotych zostal pokonany, Szmaragdy wygraly
-
 }
