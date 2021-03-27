@@ -125,17 +125,23 @@ MonoBehaviour:
   hasMoved: 0
   isAttackBlocked: 0
   isMoveBlocked: 0
-  tileAmount: 1
-  moveSpeed: 3
+  restTurnOfDebuffMove: 0
+  restTurnOfDebuffAttack: 0
+  isKing: 0
+  cooldown: 0
   name: Avocado
   playerNumber: 2
-  value: 10
+  tileAmount: 1
+  moveSpeed: 3
   attackDamage: 10
   chance: 100
   health: 10
   armor: 0
   attackRange: 1
+  value: 10
   AttackIcon: {fileID: 5307314573191143497}
+  designIcon: {fileID: 0}
+  unitNameTxt: {fileID: 0}
   hasAttacked: 0
 --- !u!1 &5307314573191143497
 GameObject:

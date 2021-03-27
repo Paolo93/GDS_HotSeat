@@ -40,6 +40,7 @@ public class Unit : MonoBehaviour
 
     //[SerializeField]
     public Text unitNameTxt;
+    //public Vector2 unitNameOffset;
 
     void Start()
     {
@@ -126,7 +127,7 @@ public class Unit : MonoBehaviour
         if (!isMoveBlocked)
         {
             gameManager.ResetTiles();
-        float distance = Vector2.Distance(transform.position, tilePosition.position);
+            float distance = Vector2.Distance(transform.position, tilePosition.position);
 
             if (Random.Range(0, 6) < 3)
             {
@@ -136,7 +137,7 @@ public class Unit : MonoBehaviour
             {
                 gameManager.ShowMessage($"Do boju kapitanie");
             }
-
+            MoveUnitName();
             Sequence moveUnitSequence = DOTween.Sequence();
             moveUnitSequence.Append(transform.DOMoveX(tilePosition.position.x, distance / moveSpeed));
             moveUnitSequence.Append(transform.DOMoveY(tilePosition.position.y, distance / moveSpeed));
@@ -147,6 +148,7 @@ public class Unit : MonoBehaviour
             });
 
         DisableAttackIcon();
+        
         }
         else
         {
@@ -189,6 +191,11 @@ public class Unit : MonoBehaviour
         {
             boomber.ResetHasMassAtacked();
         }
+    }
+
+    public void MoveUnitName()
+    {
+        unitNameTxt.transform.position = (Vector2)this.transform.position + new Vector2(0, 0.5f);
     }
 
 }
