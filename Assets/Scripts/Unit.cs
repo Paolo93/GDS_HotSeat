@@ -1,8 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class Unit : MonoBehaviour
 {
@@ -38,10 +38,19 @@ public class Unit : MonoBehaviour
     public GameObject AttackIcon;
     public GameObject designIcon;
 
+    //[SerializeField]
+    public Text unitNameTxt;
+
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
         unitManager = FindObjectOfType<UnitManager>();
+      
+        if(unitNameTxt)
+        {
+            unitNameTxt.text = this.name;
+        }
+        
     }
 
     public void GetWalkablePaths()
