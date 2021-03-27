@@ -129,14 +129,9 @@ public class Unit : MonoBehaviour
             gameManager.ResetTiles();
             float distance = Vector2.Distance(transform.position, tilePosition.position);
 
-            if (Random.Range(0, 6) < 3)
-            {
-                gameManager.ShowMessage($"Lece kapitanie");
-            }
-            else
-            {
-                gameManager.ShowMessage($"Do boju kapitanie");
-            }
+            var move = Messages.Move[Random.Range(0, Messages.Move.Length - 1)];
+            gameManager.ShowMessage(move);
+
             MoveUnitName();
             Sequence moveUnitSequence = DOTween.Sequence();
             moveUnitSequence.Append(transform.DOMoveX(tilePosition.position.x, distance / moveSpeed));
@@ -195,7 +190,8 @@ public class Unit : MonoBehaviour
 
     public void MoveUnitName()
     {
-        unitNameTxt.transform.position = (Vector2)this.transform.position + new Vector2(0, 0.5f);
+        if(unitNameTxt) unitNameTxt.transform.position = (Vector2)this.transform.position + new Vector2(0, 0.5f);
+
     }
 
 }

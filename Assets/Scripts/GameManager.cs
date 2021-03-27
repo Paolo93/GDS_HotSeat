@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     public Text armorTxt, armorTxt2;
     public Text attackRangeTxt, attackRangeTxt2;
     public Text chanceTxt, chanceTxt2;
+    public Text scoreBattle, scoreBattle2;
 
     public Text debuffMove, debuffMove2;
     public Text debuffAttack, debuffAttack2;
@@ -96,6 +97,7 @@ public class GameManager : MonoBehaviour
    
     public void UpdateStatsPanelLeft()
     {
+ 
         if (activeUnit)
         {
             healthTxt.text = "Hp " + activeUnit.health.ToString();
@@ -111,6 +113,14 @@ public class GameManager : MonoBehaviour
 
     public void UpdateStatsPanelRight()
     {
+        
+        if (UnitManager.selectedUnit && UnitManager.selectedUnit.playerNumber == 1)
+        {
+            var myAttack = UnitManager.selectedUnit.attackDamage;
+            var enemyHealth = activeUnit.health + activeUnit.armor;
+            var score = enemyHealth - myAttack;
+            Debug.Log(score);
+        }
         if (activeUnit)
         {
             healthTxt2.text = "Hp " + activeUnit.health.ToString();

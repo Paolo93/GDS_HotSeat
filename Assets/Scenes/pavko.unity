@@ -1960,6 +1960,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1007896119763460715, guid: 94df0dcb75cffb74c9ee1c855fce1896,
         type: 3}
+      propertyPath: chance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: 94df0dcb75cffb74c9ee1c855fce1896,
+        type: 3}
       propertyPath: unitNameTxt
       value: 
       objectReference: {fileID: 76114001}
@@ -8377,6 +8382,8 @@ MonoBehaviour:
   attackRangeTxt2: {fileID: 900715965}
   chanceTxt: {fileID: 307391192}
   chanceTxt2: {fileID: 1167197008}
+  scoreBattle: {fileID: 0}
+  scoreBattle2: {fileID: 0}
   debuffMove: {fileID: 1291819123}
   debuffMove2: {fileID: 1083815164}
   debuffAttack: {fileID: 2112350036}
@@ -12162,6 +12169,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1063832806}
     m_Modifications:
+    - target: {fileID: 1007896119763460715, guid: 94df0dcb75cffb74c9ee1c855fce1896,
+        type: 3}
+      propertyPath: chance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4018344409325511367, guid: 94df0dcb75cffb74c9ee1c855fce1896,
         type: 3}
       propertyPath: m_RootOrder
@@ -13635,6 +13647,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1466228113}
     m_Modifications:
+    - target: {fileID: 831052307984486974, guid: cad6a7059833d8f4db71bfa9bf69f4fd,
+        type: 3}
+      propertyPath: attackDamage
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3091956734129224806, guid: cad6a7059833d8f4db71bfa9bf69f4fd,
         type: 3}
       propertyPath: m_RootOrder
@@ -19007,6 +19024,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1063832806}
     m_Modifications:
+    - target: {fileID: 1007896119763460715, guid: 2a4b12dd4d4fe24469629956de13885f,
+        type: 3}
+      propertyPath: chance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: 2a4b12dd4d4fe24469629956de13885f,
+        type: 3}
+      propertyPath: health
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 4018344409325511367, guid: 2a4b12dd4d4fe24469629956de13885f,
         type: 3}
       propertyPath: m_RootOrder
@@ -19549,6 +19576,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1063832806}
     m_Modifications:
+    - target: {fileID: 737779614788438539, guid: 69c3e53ff6c45084886d6f3381d21e59,
+        type: 3}
+      propertyPath: chance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 737779614788438539, guid: 69c3e53ff6c45084886d6f3381d21e59,
         type: 3}
       propertyPath: unitNameTxt
@@ -20318,6 +20350,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1063832806}
     m_Modifications:
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: chance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1007896119763460715, guid: b81bf8250c9de7042b5b3bc20259e7d1,
+        type: 3}
+      propertyPath: attackDamage
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4018344409325511367, guid: b81bf8250c9de7042b5b3bc20259e7d1,
         type: 3}
       propertyPath: m_RootOrder

@@ -27,12 +27,13 @@ public class Soldier : Unit, IAttacker
             if (Random.Range(0, 100) < chance)
             {
                 enemy.health -= myDamage;
-                gameManager.ShowMessage($"{enemy.name} Dostał !!");
+                gameManager.ShowMessage($"{enemy.name} Dostał za " + myDamage);
                 //Debug.Log($"{this.name} hit {enemy.name}");
             }
             else
             {
-                Debug.Log($"{this.name} missed {enemy.name}");
+                var miss = Messages.Miss[Random.Range(0, Messages.Miss.Length -1)];
+                gameManager.ShowMessage(miss);
             }
 
             if (enemy.health <= 0)
@@ -41,7 +42,8 @@ public class Soldier : Unit, IAttacker
                 GetWalkablePaths();
                 gameManager.RemoveStatsPanel(enemy);
                 gameManager.AddScore(enemy.playerNumber, enemy.value);
-                gameManager.ShowMessage($"Haa! zabilem {enemy.name}");
+                var kill = Messages.Kill[Random.Range(0, Messages.Kill.Length - 1)];
+                gameManager.ShowMessage(kill + enemy.name);
                 if (isKing == true && playerNumber == 1)
                 {
                     gameManager.KingDeath("Krol Szmaragdow zostal pokonany, Zloci wygrali");
