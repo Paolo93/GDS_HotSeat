@@ -7,18 +7,18 @@ using UnityEngine.UI;
 public class Unit : MonoBehaviour
 {
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool hasMoved;
-    [HideInInspector]
+    //[HideInInspector]
     public bool isAttackBlocked = false;
-    [HideInInspector]
+    //[HideInInspector]
     public bool isMoveBlocked = false;
     [HideInInspector]
     public int restTurnOfDebuffMove, restTurnOfDebuffAttack;
     [HideInInspector]
     public int maxHealth;
 
-    public float HealthPercent { get { return health / maxHealth;  } }
+    //public float HealthPercent { get { return health / maxHealth;  } }
 
     public bool isKing;
     public int cooldown;
@@ -43,9 +43,7 @@ public class Unit : MonoBehaviour
     public GameObject AttackIcon;
     public GameObject designIcon;
 
-    //[SerializeField]
-    public Text unitNameTxt;
-    //public Vector2 unitNameOffset;
+    
 
     void Start()
     {
@@ -53,10 +51,6 @@ public class Unit : MonoBehaviour
         unitManager = FindObjectOfType<UnitManager>();
         maxHealth = health;
 
-        if (unitNameTxt)
-        {
-            unitNameTxt.text = this.name;
-        }
     }
 
     public void GetWalkablePaths()
@@ -137,7 +131,7 @@ public class Unit : MonoBehaviour
             var move = Messages.Move[Random.Range(0, Messages.Move.Length - 1)];
             gameManager.ShowMessage(move);
 
-            MoveUnitName();
+            
             Sequence moveUnitSequence = DOTween.Sequence();
             moveUnitSequence.Append(transform.DOMoveX(tilePosition.position.x, distance / moveSpeed));
             moveUnitSequence.Append(transform.DOMoveY(tilePosition.position.y, distance / moveSpeed));
@@ -192,11 +186,11 @@ public class Unit : MonoBehaviour
             boomber.ResetHasMassAtacked();
         }
     }
-
+    /*
     public void MoveUnitName()
     {
         if(unitNameTxt) unitNameTxt.transform.position = (Vector2)this.transform.position + new Vector2(0, 0.5f);
-
     }
+    */
 
 }

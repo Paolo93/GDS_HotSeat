@@ -9,7 +9,7 @@ public class Tiles : MonoBehaviour
     public LayerMask obstacles;
 
     public float hoverTile;
-    public Color colorMove;
+    public Color colorMove, colorReset;
     private bool isWalkable;
     GameManager gameManager;
     private UnitManager UnitManager;
@@ -53,7 +53,7 @@ public class Tiles : MonoBehaviour
 
     public void Reset()
     {
-        spriteRend.color = Color.white;
+        spriteRend.color = colorReset;
         isWalkable = false;
     }
 

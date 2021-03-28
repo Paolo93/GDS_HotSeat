@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3091956734129224811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: 0, z: 0}
-  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 8093820465957871635}
   m_Father: {fileID: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 320f4eb52e227b446830a1f6fd691fca, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7b905d1f1c73a5249a9c5a33093ceca6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,7 +101,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 1.1933334, y: 1.0133333}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -125,17 +125,23 @@ MonoBehaviour:
   hasMoved: 0
   isAttackBlocked: 0
   isMoveBlocked: 0
-  tileAmount: 0
-  moveSpeed: 0
+  restTurnOfDebuffMove: 0
+  restTurnOfDebuffAttack: 0
+  maxHealth: 0
+  isKing: 0
+  cooldown: 0
   name: ChmurnikZloty
   playerNumber: 1
-  value: 10
+  tileAmount: 0
+  moveSpeed: 0
   attackDamage: 0
   chance: 0
   health: 0
   armor: 0
   attackRange: 0
+  value: 10
   AttackIcon: {fileID: 3820138161393887405}
+  designIcon: {fileID: 0}
   hasAttacked: 0
 --- !u!1 &3820138161393887405
 GameObject:

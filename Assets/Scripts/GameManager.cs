@@ -57,12 +57,12 @@ public class GameManager : MonoBehaviour
         if(player == 1)
         {
             scorePlayerOne += value;
-            scorePlayerOneTxt.text = "Score P1: " + scorePlayerOne.ToString();
+            scorePlayerOneTxt.text = "Score: " + scorePlayerOne.ToString();
         }
         else
         {
             scorePlayerTwo += value;
-            scorePlayerTwoTxt.text = "Score P2: " + scorePlayerTwo.ToString();
+            scorePlayerTwoTxt.text = "Score: " + scorePlayerTwo.ToString();
         }
     }
 
