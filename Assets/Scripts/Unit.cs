@@ -14,7 +14,11 @@ public class Unit : MonoBehaviour
     [HideInInspector]
     public bool isMoveBlocked = false;
     [HideInInspector]
-    public int restTurnOfDebuffMove, restTurnOfDebuffAttack, maxHealth;
+    public int restTurnOfDebuffMove, restTurnOfDebuffAttack;
+    [HideInInspector]
+    public int maxHealth;
+
+    public float HealthPercent { get { return health / maxHealth;  } }
 
     public bool isKing;
     public int cooldown;
@@ -53,7 +57,6 @@ public class Unit : MonoBehaviour
         {
             unitNameTxt.text = this.name;
         }
-        
     }
 
     public void GetWalkablePaths()
