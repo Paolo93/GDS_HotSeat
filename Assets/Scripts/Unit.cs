@@ -14,7 +14,7 @@ public class Unit : MonoBehaviour
     [HideInInspector]
     public bool isMoveBlocked = false;
     [HideInInspector]
-    public int restTurnOfDebuffMove, restTurnOfDebuffAttack;
+    public int restTurnOfDebuffMove, restTurnOfDebuffAttack, maxHealth;
 
     public bool isKing;
     public int cooldown;
@@ -28,6 +28,7 @@ public class Unit : MonoBehaviour
     [Tooltip("Speed of unit")] public float moveSpeed;
     public int attackDamage;
     public int chance;
+    
     public int health;
     public int armor;
     public int attackRange;
@@ -46,8 +47,9 @@ public class Unit : MonoBehaviour
     {
         gameManager = FindObjectOfType<GameManager>();
         unitManager = FindObjectOfType<UnitManager>();
-      
-        if(unitNameTxt)
+        maxHealth = health;
+
+        if (unitNameTxt)
         {
             unitNameTxt.text = this.name;
         }

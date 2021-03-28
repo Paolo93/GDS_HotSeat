@@ -2781,6 +2781,84 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 257418632}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &270673221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 270673222}
+  - component: {fileID: 270673224}
+  - component: {fileID: 270673223}
+  m_Layer: 5
+  m_Name: ScoreBattle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &270673222
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270673221}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 694723100}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -317, y: -533}
+  m_SizeDelta: {x: 459.71332, y: 91.70282}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &270673223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270673221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Score Battle
+--- !u!222 &270673224
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270673221}
+  m_CullTransparentMesh: 0
 --- !u!1001 &283294665
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7026,6 +7104,7 @@ RectTransform:
   - {fileID: 1746166704}
   - {fileID: 301468048}
   - {fileID: 363706155}
+  - {fileID: 270673222}
   m_Father: {fileID: 1095369966}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8392,8 +8471,7 @@ MonoBehaviour:
   attackRangeTxt2: {fileID: 900715965}
   chanceTxt: {fileID: 307391192}
   chanceTxt2: {fileID: 1167197008}
-  scoreBattle: {fileID: 0}
-  scoreBattle2: {fileID: 0}
+  scoreBattle: {fileID: 270673223}
   debuffMove: {fileID: 1291819123}
   debuffMove2: {fileID: 1083815164}
   debuffAttack: {fileID: 2112350036}
@@ -20717,6 +20795,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08c20390075b7664bbae30975a386a1a, type: 3}
+--- !u!1001 &7012899977731574804
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7012899979016810432, guid: 08fe77febb3fdf64a85558f75d9c1ad1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012899979016810432, guid: 08fe77febb3fdf64a85558f75d9c1ad1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012899979016810432, guid: 08fe77febb3fdf64a85558f75d9c1ad1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012899979016810432, guid: 08fe77febb3fdf64a85558f75d9c1ad1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012899979016810432, guid: 08fe77febb3fdf64a85558f75d9c1ad1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012899979016810432, guid: 08fe77febb3fdf64a85558f75d9c1ad1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012899979016810432, guid: 08fe77febb3fdf64a85558f75d9c1ad1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012899979016810432, guid: 08fe77febb3fdf64a85558f75d9c1ad1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012899979016810432, guid: 08fe77febb3fdf64a85558f75d9c1ad1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012899979016810432, guid: 08fe77febb3fdf64a85558f75d9c1ad1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012899979016810432, guid: 08fe77febb3fdf64a85558f75d9c1ad1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7012899979016810438, guid: 08fe77febb3fdf64a85558f75d9c1ad1,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 08fe77febb3fdf64a85558f75d9c1ad1, type: 3}
 --- !u!1001 &7289717443746371715
 PrefabInstance:
   m_ObjectHideFlags: 0

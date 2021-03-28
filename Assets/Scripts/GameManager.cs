@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     public Text armorTxt, armorTxt2;
     public Text attackRangeTxt, attackRangeTxt2;
     public Text chanceTxt, chanceTxt2;
-    public Text scoreBattle, scoreBattle2;
+    public Text scoreBattle;
 
     public Text debuffMove, debuffMove2;
     public Text debuffAttack, debuffAttack2;
@@ -103,7 +103,13 @@ public class GameManager : MonoBehaviour
             var enemyHealth = activeUnit.health + activeUnit.armor;
             var score = enemyHealth - myAttack;
             Debug.Log(score);
+            scoreBattle.text = "HP po ataku bez bonusu: " + score.ToString();
         }
+        else
+        {
+            scoreBattle.text = "Wynik starcia ";
+        }
+        
         if (activeUnit)
         {
             healthTxt.text = "Hp " + activeUnit.health.ToString();
@@ -117,6 +123,11 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void ScoreUnits()
+    {
+
+    }
+
     public void UpdateStatsPanelRight()
     {
         if (UnitManager.selectedUnit && UnitManager.selectedUnit.playerNumber == 1 && activeUnit)
@@ -125,6 +136,10 @@ public class GameManager : MonoBehaviour
             var enemyHealth = activeUnit.health + activeUnit.armor;
             var score = enemyHealth - myAttack;
             Debug.Log(score);
+            scoreBattle.text = "HP po ataku bez bonusu: " + score.ToString();
+        } else
+        {
+            scoreBattle.text = "Wynik starcia ";
         }
         if (activeUnit)
         {
@@ -170,12 +185,14 @@ public class GameManager : MonoBehaviour
         {
             playerTurn = 2;
             ShowMessage($"Czas na Szmaragdy");
+            scoreBattle.text = "Wynik starcia ";
         }
         else if (playerTurn == 2)
         {
             playerTurn = 1;
             ShowMessage($"Zloci Do boju");
             UpdateTurn();
+            scoreBattle.text = "Wynik starcia ";
             foreach (Unit units in FindObjectsOfType<Unit>())
             {
                 if (units.isMoveBlocked)
