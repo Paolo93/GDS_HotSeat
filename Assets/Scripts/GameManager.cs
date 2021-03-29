@@ -11,8 +11,8 @@ public class GameManager : MonoBehaviour
 
     public int scorePlayerOne = 0, scorePlayerTwo = 0;
 
-    [HideInInspector]
-    public int numberOfTurn = 0;
+    //[HideInInspector]
+    public int numberOfTurn = 1;
     public int playerTurn = 1;
     [HideInInspector]
     public static bool isDesignMode = false;
@@ -57,12 +57,12 @@ public class GameManager : MonoBehaviour
         if(player == 1)
         {
             scorePlayerOne += value;
-            scorePlayerOneTxt.text = "Score: " + scorePlayerOne.ToString();
+            scorePlayerOneTxt.text = scorePlayerOne.ToString();
         }
         else
         {
             scorePlayerTwo += value;
-            scorePlayerTwoTxt.text = "Score: " + scorePlayerTwo.ToString();
+            scorePlayerTwoTxt.text = scorePlayerTwo.ToString();
         }
     }
 
@@ -156,7 +156,7 @@ public class GameManager : MonoBehaviour
     public void UpdateTurn()
     {
         numberOfTurn++;
-        numberOfTurnTxt.text = "Turn: " + numberOfTurn.ToString();
+        numberOfTurnTxt.text = numberOfTurn.ToString();
     }
 
     public void RemoveStatsPanel(Unit unit)
