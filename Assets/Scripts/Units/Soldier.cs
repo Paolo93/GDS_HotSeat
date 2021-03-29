@@ -32,8 +32,8 @@ public class Soldier : Unit, IAttacker
             }
             else
             {
-                var miss = Messages.Miss[Random.Range(0, Messages.Miss.Length -1)];
-                gameManager.ShowMessage(miss);
+                //var miss = Messages.Miss[Random.Range(0, Messages.Miss.Length -1)];
+                gameManager.ShowMessage($"{this.name} atakuje {enemy.name} i pudłuje");
             }
 
             if (enemy.health <= 0)
@@ -42,9 +42,9 @@ public class Soldier : Unit, IAttacker
                 GetWalkablePaths();
                 gameManager.RemoveStatsPanel(enemy);
                 gameManager.AddScore(enemy.playerNumber, enemy.value);
-                var kill = Messages.Kill[Random.Range(0, Messages.Kill.Length - 1)];
-                gameManager.ShowMessage(kill + enemy.name);
-                if (isKing == true && playerNumber == 1)
+                //var kill = Messages.Kill[Random.Range(0, Messages.Kill.Length - 1)];
+                gameManager.ShowMessage($"{enemy.name} zostaje zniszczona przez jednostkę {this.name}");
+                if (enemy.isKing == true && playerNumber == 1)
                 {
                     gameManager.KingDeath("Krol Szmaragdow zostal pokonany, Zloci wygrali");
                     Time.timeScale = 0f;

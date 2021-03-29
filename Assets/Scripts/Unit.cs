@@ -128,8 +128,8 @@ public class Unit : MonoBehaviour
             gameManager.ResetTiles();
             float distance = Vector2.Distance(transform.position, tilePosition.position);
 
-            var move = Messages.Move[Random.Range(0, Messages.Move.Length - 1)];
-            gameManager.ShowMessage(move);
+            //var move = Messages.Move[Random.Range(0, Messages.Move.Length - 1)];
+            gameManager.ShowMessage($"Jednostka {this.name} rusza się");
 
             
             Sequence moveUnitSequence = DOTween.Sequence();
@@ -146,7 +146,7 @@ public class Unit : MonoBehaviour
         }
         else
         {
-            gameManager.ShowMessage($"Kapitanie, nie  moge sie ruszyc");
+            gameManager.ShowMessage($"Jednostka {this.name} ma chwilowo zablokowany ruch");
         }
     }
 

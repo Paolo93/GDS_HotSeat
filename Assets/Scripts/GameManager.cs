@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     [Space(10)]
     public Text scorePlayerOneTxt, scorePlayerTwoTxt;
 
+    public Text unitName, unitName2;
     public Text healthTxt, healthTxt2;
     public Text attackDamageTxt, attackDamageTxt2;
     public Text armorTxt, armorTxt2;
@@ -112,11 +113,12 @@ public class GameManager : MonoBehaviour
         
         if (activeUnit)
         {
+            unitName.text = activeUnit.name;
             healthTxt.text = "Hp " + activeUnit.health.ToString();
-            attackDamageTxt.text = "Dmg " + activeUnit.attackDamage.ToString();
-            armorTxt.text = "Armor " + activeUnit.armor.ToString();
-            attackRangeTxt.text = "Range " + activeUnit.attackRange.ToString();
-            chanceTxt.text = "Chance " + activeUnit.chance.ToString();
+            attackDamageTxt.text = activeUnit.attackDamage.ToString();
+            armorTxt.text = activeUnit.armor.ToString();
+            attackRangeTxt.text = activeUnit.attackRange.ToString();
+            chanceTxt.text =  activeUnit.chance.ToString();
             debuffMove.text = "Rest of Turn Debuff Move: " + activeUnit.restTurnOfDebuffMove.ToString();
             debuffAttack.text = "Rest of Turn Debuff Attack: " + activeUnit.restTurnOfDebuffAttack.ToString();
         }
@@ -143,11 +145,12 @@ public class GameManager : MonoBehaviour
         }
         if (activeUnit)
         {
+            unitName2.text = activeUnit.name;
             healthTxt2.text = "Hp " + activeUnit.health.ToString();
-            attackDamageTxt2.text = "Dmg " + activeUnit.attackDamage.ToString();
-            armorTxt2.text = "Armor " + activeUnit.armor.ToString();
-            attackRangeTxt2.text = "Range " + activeUnit.attackRange.ToString();
-            chanceTxt2.text = "Chance " + activeUnit.chance.ToString();
+            attackDamageTxt2.text = activeUnit.attackDamage.ToString();
+            armorTxt2.text = activeUnit.armor.ToString();
+            attackRangeTxt2.text =  activeUnit.attackRange.ToString();
+            chanceTxt2.text =  activeUnit.chance.ToString();
             debuffMove2.text = "Rest of Turn Debuff Move: " + activeUnit.restTurnOfDebuffMove.ToString();
             debuffAttack2.text = "Rest of Turn Debuff Attack: " + activeUnit.restTurnOfDebuffAttack.ToString();
         }
