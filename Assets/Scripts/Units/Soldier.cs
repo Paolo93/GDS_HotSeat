@@ -45,12 +45,12 @@ public class Soldier : Unit, IAttacker
                 gameManager.ShowMessage($"{enemy.name} zostaje zniszczona przez jednostkę {this.name}");
                 if (enemy.isKing == true && playerNumber == 1)
                 {
-                    gameManager.KingDeath("Krol Szmaragdow zostal pokonany, Zloci wygrali");
+                    gameManager.KingDeath("Dowódca drużyny Szmaragdów pokonany, drużyna Złotych wygrywa!");
                     Time.timeScale = 0f;
                 }
                 else if (isKing == true && playerNumber == 2)
                 {
-                    gameManager.KingDeath("Krol Zlotych zostal pokonany, Szmaragdy wygraly");
+                    gameManager.KingDeath("Dowódca drużyny Złotych pokonany, drużyna Szmaragdy wygrywa!");
                     Time.timeScale = 0f;
                 }
             }
