@@ -212,14 +212,14 @@ MonoBehaviour:
   maxHealth: 0
   isKing: 1
   cooldown: 0
-  name: KingSzmaragd
+  name: Komandor
   playerNumber: 2
   tileAmount: 1
-  moveSpeed: 3
-  attackDamage: 10
-  chance: 100
-  health: 10
-  armor: 0
+  moveSpeed: 2
+  attackDamage: 30
+  chance: 80
+  health: 85
+  armor: 5
   attackRange: 1
   value: 10
   AttackIcon: {fileID: 5307314573191143497}

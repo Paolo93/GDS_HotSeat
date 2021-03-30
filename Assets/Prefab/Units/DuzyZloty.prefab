@@ -131,14 +131,14 @@ MonoBehaviour:
   maxHealth: 0
   isKing: 0
   cooldown: 0
-  name: DuzyZloty
+  name: Forteca
   playerNumber: 1
   tileAmount: 1
-  moveSpeed: 3
-  attackDamage: 10
-  chance: 100
-  health: 100
-  armor: 0
+  moveSpeed: 2
+  attackDamage: 25
+  chance: 75
+  health: 80
+  armor: 15
   attackRange: 1
   value: 20
   AttackIcon: {fileID: 3820138161393887405}

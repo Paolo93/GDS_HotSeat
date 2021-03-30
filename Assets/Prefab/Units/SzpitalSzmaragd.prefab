@@ -211,15 +211,15 @@ MonoBehaviour:
   maxHealth: 0
   isKing: 0
   cooldown: 0
-  name: SzpitalZloty
+  name: Spawacz
   playerNumber: 2
   tileAmount: 2
-  moveSpeed: 3
+  moveSpeed: 2
   attackDamage: 0
-  chance: 100
-  health: 10
-  armor: 0
-  attackRange: 3
+  chance: 0
+  health: 50
+  armor: 10
+  attackRange: 0
   value: 20
   AttackIcon: {fileID: 3055889656280257218}
   designIcon: {fileID: 0}

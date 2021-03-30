@@ -130,15 +130,15 @@ MonoBehaviour:
   maxHealth: 0
   isKing: 0
   cooldown: 0
-  name: ChmurnikSzmaragd
+  name: Haubica
   playerNumber: 2
   tileAmount: 1
-  moveSpeed: 2
-  attackDamage: 11
-  chance: 11
-  health: 11
-  armor: 11
-  attackRange: 2
+  moveSpeed: 3
+  attackDamage: 20
+  chance: 85
+  health: 45
+  armor: 5
+  attackRange: 3
   value: 10
   AttackIcon: {fileID: 3820138161393887405}
   designIcon: {fileID: 0}

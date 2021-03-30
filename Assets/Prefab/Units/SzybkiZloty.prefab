@@ -130,14 +130,14 @@ MonoBehaviour:
   maxHealth: 0
   isKing: 0
   cooldown: 0
-  name: SzybkiZloty
+  name: Sztylet
   playerNumber: 1
   tileAmount: 1
-  moveSpeed: 3
-  attackDamage: 5
-  chance: 50
-  health: 100
-  armor: 0
+  moveSpeed: 4
+  attackDamage: 30
+  chance: 85
+  health: 45
+  armor: 5
   attackRange: 0
   value: 10
   AttackIcon: {fileID: 3820138161393887405}

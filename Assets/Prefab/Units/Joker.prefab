@@ -131,15 +131,15 @@ MonoBehaviour:
   maxHealth: 0
   isKing: 0
   cooldown: 0
-  name: Joker
+  name: "\u0141owca"
   playerNumber: 1
   tileAmount: 1
   moveSpeed: 3
-  attackDamage: 1
-  chance: 100
-  health: 10
-  armor: 0
-  attackRange: 3
+  attackDamage: 40
+  chance: 90
+  health: 60
+  armor: 10
+  attackRange: 1
   value: 10
   AttackIcon: {fileID: 3820138161393887405}
   designIcon: {fileID: 3015826284110192064}

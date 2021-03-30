@@ -130,15 +130,15 @@ MonoBehaviour:
   maxHealth: 0
   isKing: 0
   cooldown: 0
-  name: ChmurnikZloty
+  name: Armata
   playerNumber: 1
-  tileAmount: 0
-  moveSpeed: 0
-  attackDamage: 0
-  chance: 0
-  health: 0
-  armor: 0
-  attackRange: 0
+  tileAmount: 1
+  moveSpeed: 2
+  attackDamage: 20
+  chance: 80
+  health: 50
+  armor: 10
+  attackRange: 3
   value: 10
   AttackIcon: {fileID: 3820138161393887405}
   designIcon: {fileID: 0}

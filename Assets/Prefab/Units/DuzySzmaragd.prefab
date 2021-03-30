@@ -130,14 +130,14 @@ MonoBehaviour:
   maxHealth: 0
   isKing: 0
   cooldown: 0
-  name: Avocado
+  name: Bastion
   playerNumber: 2
   tileAmount: 1
-  moveSpeed: 3
-  attackDamage: 10
-  chance: 100
-  health: 10
-  armor: 0
+  moveSpeed: 2
+  attackDamage: 25
+  chance: 75
+  health: 75
+  armor: 15
   attackRange: 1
   value: 10
   AttackIcon: {fileID: 5307314573191143497}

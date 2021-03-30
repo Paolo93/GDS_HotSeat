@@ -293,17 +293,17 @@ MonoBehaviour:
   maxHealth: 0
   isKing: 0
   cooldown: 0
-  name: SzpitalZloty
+  name: Majster
   playerNumber: 1
   tileAmount: 2
-  moveSpeed: 3
+  moveSpeed: 2
   attackDamage: 0
-  chance: 100
-  health: 10
-  armor: 0
-  attackRange: 3
+  chance: 0
+  health: 55
+  armor: 10
+  attackRange: 0
   value: 20
   AttackIcon: {fileID: 3055889656280257218}
   designIcon: {fileID: 2161247568651507386}
-  healAmount: 5
+  healAmount: 30
   hasHealed: 0

@@ -127,19 +127,21 @@ MonoBehaviour:
   isMoveBlocked: 0
   restTurnOfDebuffMove: 0
   restTurnOfDebuffAttack: 0
+  maxHealth: 0
   isKing: 1
   cooldown: 0
-  name: KingZloty
+  name: "Admira\u0142"
   playerNumber: 1
   tileAmount: 2
-  moveSpeed: 4
-  attackDamage: 10
-  chance: 100
-  health: 10
-  armor: 0
+  moveSpeed: 2
+  attackDamage: 25
+  chance: 80
+  health: 85
+  armor: 5
   attackRange: 1
   value: 10
   AttackIcon: {fileID: 3820138161393887405}
+  designIcon: {fileID: 0}
   hasAttacked: 0
 --- !u!1 &3820138161393887405
 GameObject:
