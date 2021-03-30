@@ -122,6 +122,10 @@ public class UnitManager : MonoBehaviour
         if (selectedUnit is IAttacker attacker && !selectedUnit.isAttackBlocked)
         {
             attacker.Attack(clickedUnit);
+        } 
+        else
+        {
+            GameManager.ShowMessage($"Jednostka {this.name} ma chwilowo zablokowany atak");
         }
     }
 

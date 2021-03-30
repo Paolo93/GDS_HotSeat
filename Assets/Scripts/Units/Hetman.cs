@@ -20,12 +20,12 @@ public class Hetman : Soldier, IHetman
                 hasAttacked = true;
                 enemy.isMoveBlocked = true;
                 enemy.restTurnOfDebuffMove = 2;
-                gameManager.ShowMessage($"Kapitanie, {enemy.name} został zablokowany");
+                gameManager.ShowMessage($"Jednostka {this.name} zarzuciła blokadę ruchu na jednostkę {enemy.name}");
                 this.cooldown += 2;
             } 
             else
             {
-                gameManager.ShowMessage($"Nie moge zablokowac {enemy.name}");
+                gameManager.ShowMessage($"Jednostka {this.name} nie może blokować przez {this.cooldown} tur");
             }
         }
     }

@@ -27,7 +27,7 @@ public class Soldier : Unit, IAttacker
             if (Random.Range(0, 100) < chance)
             {
                 enemy.health -= myDamage;
-                gameManager.ShowMessage($"{enemy.name} Dostał za " + myDamage);  
+                gameManager.ShowMessage($"Jednostka {this.name} atakuje {enemy.name} i zadaje {myDamage} punktów obrażeń");  
             }
             else
             {

@@ -191,13 +191,13 @@ public class GameManager : MonoBehaviour
         if (playerTurn == 1)
         {
             playerTurn = 2;
-            ShowMessage($"Czas na Szmaragdy");
+            ShowMessage($"zmiana tury na Szmaragdy");
             scoreBattle.text = "Wynik starcia ";
         }
         else if (playerTurn == 2)
         {
             playerTurn = 1;
-            ShowMessage($"Zloci Do boju");
+            ShowMessage($"zmiana tury na Zlotych");
             UpdateTurn();
             scoreBattle.text = "Wynik starcia ";
             foreach (Unit units in FindObjectsOfType<Unit>())
