@@ -16,9 +16,8 @@ public class Unit : MonoBehaviour
     [HideInInspector]
     public int restTurnOfDebuffMove, restTurnOfDebuffAttack;
     [HideInInspector]
-    public int maxHealth;
+    public float maxHealth;
 
-    //public float HealthPercent { get { return health / maxHealth;  } }
 
     public bool isKing;
     public int cooldown;

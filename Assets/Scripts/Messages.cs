@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Messages : MonoBehaviour
+public class Messages
 {
   
     public static readonly string[] Miss = new string[] 

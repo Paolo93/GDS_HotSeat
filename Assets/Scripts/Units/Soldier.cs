@@ -27,8 +27,7 @@ public class Soldier : Unit, IAttacker
             if (Random.Range(0, 100) < chance)
             {
                 enemy.health -= myDamage;
-                gameManager.ShowMessage($"{enemy.name} Dostał za " + myDamage);
-                //Debug.Log($"{this.name} hit {enemy.name}");
+                gameManager.ShowMessage($"{enemy.name} Dostał za " + myDamage);  
             }
             else
             {
@@ -58,7 +57,6 @@ public class Soldier : Unit, IAttacker
 
             if (health <= 0)
             {
-
                 gameManager.ResetTiles();
                 DestroyUnit(this);
             }
@@ -73,7 +71,6 @@ public class Soldier : Unit, IAttacker
     {
         if (hasAttacked)
         {
-            //gameManager.ShowMessage($"{this.name} has already attacked");
             //Debug.Log($"{this.name} has already attacked");
             return new List<Unit>();
         }
