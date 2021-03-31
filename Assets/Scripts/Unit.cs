@@ -18,6 +18,8 @@ public class Unit : MonoBehaviour
     [HideInInspector]
     public float maxHealth;
 
+    public Text describtion;
+
 
     public bool isKing;
     public int cooldown;
