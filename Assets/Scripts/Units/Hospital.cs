@@ -13,6 +13,7 @@ public class Hospital : Unit, IHealer
 		if (HealableUnits().Contains(target))
 		{
 			Debug.Log($"Jednostka {target.name} został naprawiona");
+            FindObjectOfType<AudioManager>().Play("leczenie");
 			hasHealed = true;
 			hasMoved = true;
 			gameManager.ResetTiles();

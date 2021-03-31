@@ -31,7 +31,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        Play("Sky");
+        Play("maintheme");
     }
 
     public void Play(string name)

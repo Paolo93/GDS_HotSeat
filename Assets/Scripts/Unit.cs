@@ -138,6 +138,7 @@ public class Unit : MonoBehaviour
             {
                 hasMoved = true;
                 unitManager.RefreshSelectedUnitTargets();
+                FindObjectOfType<AudioManager>().Play("ruch_jednostki");
             });
 
         DisableAttackIcon();

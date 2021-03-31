@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
     public Text armorTxt, armorTxt2;
     public Text attackRangeTxt, attackRangeTxt2;
     public Text chanceTxt, chanceTxt2;
+    public Text describtion, describtion2;
     public Slider sliderHP, sliderHP2;
     public Text scoreBattle;
     

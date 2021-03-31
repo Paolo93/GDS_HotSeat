@@ -27,7 +27,8 @@ public class Soldier : Unit, IAttacker
             if (Random.Range(0, 100) < chance)
             {
                 enemy.health -= myDamage;
-                gameManager.ShowMessage($"Jednostka {this.name} atakuje {enemy.name} i zadaje {myDamage} punktów obrażeń");  
+                gameManager.ShowMessage($"Jednostka {this.name} atakuje {enemy.name} i zadaje {myDamage} punktów obrażeń");
+                FindObjectOfType<AudioManager>().Play("dzwiek_ataku");
             }
             else
             {
@@ -43,6 +44,7 @@ public class Soldier : Unit, IAttacker
                 gameManager.AddScore(enemy.playerNumber, enemy.value);
                 //var kill = Messages.Kill[Random.Range(0, Messages.Kill.Length - 1)];
                 gameManager.ShowMessage($"{enemy.name} zostaje zniszczona przez jednostkę {this.name}");
+                FindObjectOfType<AudioManager>().Play("smierc-eksplozja");
                 if (enemy.isKing == true && playerNumber == 1)
                 {
                     gameManager.KingDeath("Dowódca drużyny Szmaragdów pokonany, drużyna Złotych wygrywa!");
