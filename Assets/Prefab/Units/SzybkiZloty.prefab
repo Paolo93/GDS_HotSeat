@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3091956734129224811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 0}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1}
+  m_LocalPosition: {x: -5.45, y: -1.5, z: 0}
+  m_LocalScale: {x: -1.3, y: 1.3, z: 1}
   m_Children:
   - {fileID: 8093820465957871635}
   m_Father: {fileID: 0}
@@ -128,18 +128,19 @@ MonoBehaviour:
   restTurnOfDebuffMove: 0
   restTurnOfDebuffAttack: 0
   maxHealth: 0
-  describtionUnit: Jestem szybki
+  descriptionUnit: "w gotowo\u015Bci bojowej! Jestem szybki, zwinny i zab\xF3jczy."
+  descriptionUnitPanel: 
   isKing: 0
   cooldown: 0
   name: Sztylet
   playerNumber: 1
-  tileAmount: 1
-  moveSpeed: 4
+  tileAmount: 4
+  moveSpeed: 2
   attackDamage: 30
   chance: 85
   health: 45
   armor: 5
-  attackRange: 0
+  attackRange: 1
   value: 10
   AttackIcon: {fileID: 3820138161393887405}
   designIcon: {fileID: 0}

@@ -26,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4018344409325511370}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.51, y: 0.62, z: 0}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_Children:
   - {fileID: 6577245050098225811}
   m_Father: {fileID: 0}
@@ -128,11 +128,13 @@ MonoBehaviour:
   restTurnOfDebuffMove: 0
   restTurnOfDebuffAttack: 0
   maxHealth: 0
+  descriptionUnit: 'gotowy do akcji! Armaty mi nie straszne. '
+  descriptionUnitPanel: 
   isKing: 0
   cooldown: 0
   name: Bastion
   playerNumber: 2
-  tileAmount: 1
+  tileAmount: 2
   moveSpeed: 2
   attackDamage: 25
   chance: 75

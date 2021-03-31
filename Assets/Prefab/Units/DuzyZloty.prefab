@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3091956734129224811}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -5.18, y: 0.7, z: 0}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_Children:
   - {fileID: 8093820465957871635}
   - {fileID: 3015826284110192066}
@@ -129,13 +129,13 @@ MonoBehaviour:
   restTurnOfDebuffMove: 0
   restTurnOfDebuffAttack: 0
   maxHealth: 0
-  descriptionUnit: 
+  descriptionUnit: gotowy do akcji! Armaty mi nie straszne.
   descriptionUnitPanel: 
   isKing: 0
   cooldown: 0
   name: Forteca
   playerNumber: 1
-  tileAmount: 1
+  tileAmount: 2
   moveSpeed: 2
   attackDamage: 25
   chance: 75

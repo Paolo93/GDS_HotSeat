@@ -26,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4018344409325511370}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.67, y: 2.51, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 6577245050098225811}
@@ -129,14 +129,15 @@ MonoBehaviour:
   restTurnOfDebuffMove: 0
   restTurnOfDebuffAttack: 0
   maxHealth: 0
-  descriptionUnit: 
+  descriptionUnit: "na posterunku! Mog\u0119 zablokowa\u0107 mo\u017Cliwo\u015B\u0107
+    ataku ka\u017Cdego przeciwnika."
   descriptionUnitPanel: 
   isKing: 0
   cooldown: 0
   name: Traper
   playerNumber: 2
-  tileAmount: 1
-  moveSpeed: 3
+  tileAmount: 3
+  moveSpeed: 2
   attackDamage: 35
   chance: 90
   health: 55

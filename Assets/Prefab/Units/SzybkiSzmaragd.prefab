@@ -26,8 +26,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4018344409325511370}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.72, y: -1.45, z: 0}
   m_LocalScale: {x: 1.4, y: 1.4, z: 0.43725}
   m_Children:
   - {fileID: 6577245050098225811}
@@ -128,12 +128,14 @@ MonoBehaviour:
   restTurnOfDebuffMove: 0
   restTurnOfDebuffAttack: 0
   maxHealth: 0
+  descriptionUnit: "w gotowo\u015Bci bojowej! Jestem szybki, zwinny i zab\xF3jczy."
+  descriptionUnitPanel: 
   isKing: 0
   cooldown: 0
   name: Kordelas
   playerNumber: 2
-  tileAmount: 1
-  moveSpeed: 4
+  tileAmount: 4
+  moveSpeed: 2
   attackDamage: 35
   chance: 90
   health: 40

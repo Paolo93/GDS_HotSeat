@@ -108,7 +108,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3856135016409843204}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 1, z: 0}
+  m_LocalPosition: {x: 7.03, y: 3.71, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 8014277367287470716}
@@ -209,6 +209,9 @@ MonoBehaviour:
   restTurnOfDebuffMove: 0
   restTurnOfDebuffAttack: 0
   maxHealth: 0
+  descriptionUnit: "zg\u0142asza si\u0119 do gotowo\u015Bci! Mog\u0119 naprawi\u0107
+    ka\u017Cdy statek."
+  descriptionUnitPanel: 
   isKing: 0
   cooldown: 0
   name: Spawacz
@@ -219,7 +222,7 @@ MonoBehaviour:
   chance: 0
   health: 50
   armor: 10
-  attackRange: 0
+  attackRange: 20
   value: 20
   AttackIcon: {fileID: 3055889656280257218}
   designIcon: {fileID: 0}
