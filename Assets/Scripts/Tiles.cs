@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 public class Tiles : MonoBehaviour
@@ -53,7 +52,7 @@ public class Tiles : MonoBehaviour
 
     public void Reset()
     {
-        spriteRend.color = colorReset;
+        spriteRend.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
         isWalkable = false;
     }
 

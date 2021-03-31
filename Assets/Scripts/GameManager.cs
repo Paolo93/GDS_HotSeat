@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     public Text armorTxt, armorTxt2;
     public Text attackRangeTxt, attackRangeTxt2;
     public Text chanceTxt, chanceTxt2;
-    public Text describtion, describtion2;
+    public Text description, description2;
     public Slider sliderHP, sliderHP2;
     public Text scoreBattle;
     
@@ -121,7 +121,7 @@ public class GameManager : MonoBehaviour
             attackDamageTxt.text = activeUnit.attackDamage.ToString();
             armorTxt.text = activeUnit.armor.ToString();
             attackRangeTxt.text = activeUnit.attackRange.ToString();
-            describtion2.text = activeUnit.describtion.ToString();
+            description.text = activeUnit.descriptionUnitPanel;
             chanceTxt.text =  activeUnit.chance.ToString();
             debuffMove.text = "Rest of Turn Debuff Move: " + activeUnit.restTurnOfDebuffMove.ToString();
             debuffAttack.text = "Rest of Turn Debuff Attack: " + activeUnit.restTurnOfDebuffAttack.ToString();
@@ -152,7 +152,7 @@ public class GameManager : MonoBehaviour
         {
             unitName2.text = activeUnit.name;
             healthTxt2.text = "Hp " + activeUnit.health.ToString();
-            describtion.text = activeUnit.describtion.ToString();
+            description2.text = activeUnit.descriptionUnitPanel;
             attackDamageTxt2.text = activeUnit.attackDamage.ToString();
             armorTxt2.text = activeUnit.armor.ToString();
             attackRangeTxt2.text =  activeUnit.attackRange.ToString();

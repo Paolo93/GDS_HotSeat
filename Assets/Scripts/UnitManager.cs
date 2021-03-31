@@ -38,7 +38,7 @@ public class UnitManager : MonoBehaviour
     public void SelectUnit(Unit unit)
     {
         Debug.Log($"Selected: {unit.name}");
-        GameManager.ShowMessage($"{unit.name}, melduje sie do gotowości");
+        GameManager.ShowMessage($"{unit.name}, {unit.descriptionUnit}");
 
         if (selectedUnit != null) { DeselectUnit(); }
 

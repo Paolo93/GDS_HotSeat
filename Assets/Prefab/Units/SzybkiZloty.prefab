@@ -128,6 +128,7 @@ MonoBehaviour:
   restTurnOfDebuffMove: 0
   restTurnOfDebuffAttack: 0
   maxHealth: 0
+  describtionUnit: Jestem szybki
   isKing: 0
   cooldown: 0
   name: Sztylet

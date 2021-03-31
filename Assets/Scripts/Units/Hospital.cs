@@ -17,7 +17,10 @@ public class Hospital : Unit, IHealer
 			hasHealed = true;
 			hasMoved = true;
 			gameManager.ResetTiles();
-			target.health += healAmount;
+            if(target.health < target.maxHealth)
+            {
+                target.health += healAmount;
+            }
             gameManager.UpdateStatsPanelLeft();
             gameManager.UpdateStatsPanelRight();
         }

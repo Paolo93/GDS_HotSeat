@@ -18,7 +18,8 @@ public class Unit : MonoBehaviour
     [HideInInspector]
     public float maxHealth;
 
-    public Text describtion;
+    public string descriptionUnit;
+    public string descriptionUnitPanel;
 
 
     public bool isKing;

@@ -43,7 +43,7 @@ public class Soldier : Unit, IAttacker
                 gameManager.RemoveStatsPanel(enemy);
                 gameManager.AddScore(enemy.playerNumber, enemy.value);
                 //var kill = Messages.Kill[Random.Range(0, Messages.Kill.Length - 1)];
-                gameManager.ShowMessage($"{enemy.name} zostaje zniszczona przez jednostkę {this.name}");
+                gameManager.ShowMessage($"Statek {enemy.name} zostaje zniszczony przez jednostkę {this.name}");
                 FindObjectOfType<AudioManager>().Play("smierc-eksplozja");
                 if (enemy.isKing == true && playerNumber == 1)
                 {
