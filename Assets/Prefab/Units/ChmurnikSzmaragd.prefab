@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3091956734129224811}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 6.86, y: -0.41, z: 0}
-  m_LocalScale: {x: 1.55, y: 1.55, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children:
   - {fileID: 8093820465957871635}
   m_Father: {fileID: 0}
@@ -128,8 +128,8 @@ MonoBehaviour:
   restTurnOfDebuffMove: 0
   restTurnOfDebuffAttack: 0
   maxHealth: 0
-  descriptionUnit: "czeka na rozkazy! Moje armaty dalekosi\u0119\u017Cne dorw\u0105
-    ka\u017Cdego przeciwnika. "
+  descriptionUnit: "czeka na rozkazy! Moja armata dalekosi\u0119\u017Cna dorwie ka\u017Cdego
+    przeciwnika. "
   descriptionUnitPanel: 
   isKing: 0
   cooldown: 0

@@ -129,8 +129,7 @@ MonoBehaviour:
   restTurnOfDebuffMove: 0
   restTurnOfDebuffAttack: 0
   maxHealth: 0
-  descriptionUnit: "czeka na rozkazy! Moje armaty dalekosi\u0119\u017Cne dorw\u0105
-    ka\u017Cdego przeciwnika. "
+  descriptionUnit: "czeka na rozkazy! Moja armata dalekosi\u0119\u017Cne dorwie ka\u017Cdego. "
   descriptionUnitPanel: 
   isKing: 0
   cooldown: 0
