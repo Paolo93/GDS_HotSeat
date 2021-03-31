@@ -129,6 +129,8 @@ MonoBehaviour:
   restTurnOfDebuffMove: 0
   restTurnOfDebuffAttack: 0
   maxHealth: 0
+  descriptionUnit: 
+  descriptionUnitPanel: 
   isKing: 0
   cooldown: 0
   name: Forteca
@@ -142,7 +144,7 @@ MonoBehaviour:
   attackRange: 1
   value: 20
   AttackIcon: {fileID: 3820138161393887405}
-  designIcon: {fileID: 0}
+  designIcon: {fileID: 3015826284110192064}
   hasAttacked: 0
 --- !u!1 &3820138161393887405
 GameObject:
@@ -240,27 +242,27 @@ PrefabInstance:
     - target: {fileID: 4544253223984200776, guid: 8e93d6cc9be2cd5458cd8a410360b49c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.047474533
+      value: 0.118880086
       objectReference: {fileID: 0}
     - target: {fileID: 4544253223984200776, guid: 8e93d6cc9be2cd5458cd8a410360b49c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.047474533
+      value: 0.118880086
       objectReference: {fileID: 0}
     - target: {fileID: 4544253223984200776, guid: 8e93d6cc9be2cd5458cd8a410360b49c,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.047474533
+      value: 0.118880086
       objectReference: {fileID: 0}
     - target: {fileID: 4544253223984200776, guid: 8e93d6cc9be2cd5458cd8a410360b49c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.2267
       objectReference: {fileID: 0}
     - target: {fileID: 4544253223984200776, guid: 8e93d6cc9be2cd5458cd8a410360b49c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0811
       objectReference: {fileID: 0}
     - target: {fileID: 4544253223984200776, guid: 8e93d6cc9be2cd5458cd8a410360b49c,
         type: 3}
@@ -329,6 +331,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e93d6cc9be2cd5458cd8a410360b49c, type: 3}
+--- !u!1 &3015826284110192064 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4544253223984200778, guid: 8e93d6cc9be2cd5458cd8a410360b49c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1642178056735744394}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3015826284110192066 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4544253223984200776, guid: 8e93d6cc9be2cd5458cd8a410360b49c,
