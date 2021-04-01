@@ -133,7 +133,7 @@ public class Unit : MonoBehaviour
             //var move = Messages.Move[Random.Range(0, Messages.Move.Length - 1)];
             gameManager.ShowMessage($"Jednostka {this.name} rusza się");
 
-            
+            FindObjectOfType<AudioManager>().Play("ruch_jednostki");
             Sequence moveUnitSequence = DOTween.Sequence();
             moveUnitSequence.Append(transform.DOMoveX(tilePosition.position.x, distance / moveSpeed));
             moveUnitSequence.Append(transform.DOMoveY(tilePosition.position.y, distance / moveSpeed));
@@ -141,7 +141,7 @@ public class Unit : MonoBehaviour
             {
                 hasMoved = true;
                 unitManager.RefreshSelectedUnitTargets();
-                FindObjectOfType<AudioManager>().Play("ruch_jednostki");
+           
             });
 
         DisableAttackIcon();
