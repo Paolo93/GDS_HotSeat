@@ -46,31 +46,31 @@ MonoBehaviour:
   sounds:
   - name: maintheme
     clip: {fileID: 8300000, guid: bc7b33efeb74fd04998b51c7e27cb99d, type: 3}
-    volume: 0.15
+    volume: 0.05
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: leczenie
     clip: {fileID: 8300000, guid: 8bb8b723a3668064fa039bea8fca74b9, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 0.15
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: dzwiek_ataku
     clip: {fileID: 8300000, guid: 69c7dcf7356dfee4e8c3685aa2102006, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 0.15
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: smierc-eksplozja
     clip: {fileID: 8300000, guid: 97148c7ac3a92f645ba7b2df018819cf, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 0.15
+    pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: ruch_jednostki
     clip: {fileID: 8300000, guid: 27be470387f0d7547969fca9b45ee468, type: 3}
-    volume: 0
-    pitch: 0
+    volume: 0.15
+    pitch: 1
     loop: 0
     source: {fileID: 0}

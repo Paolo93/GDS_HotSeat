@@ -124,6 +124,6 @@ MonoBehaviour:
   obstacles:
     serializedVersion: 2
     m_Bits: 1024
-  hoverTile: 0.02
-  colorMove: {r: 0.127759, g: 0.8207547, b: 0.7696702, a: 1}
+  hoverTile: 0.5
+  colorMove: {r: 0.44705883, g: 0.972549, b: 0.96862745, a: 1}
   colorReset: {r: 0.5055554, g: 1, b: 0.3537736, a: 0}
