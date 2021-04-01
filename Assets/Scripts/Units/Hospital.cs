@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hospital : Unit, IHealer
 {
-	public int healAmount = 5;
+	public int healAmount = 30;
 
 	public bool hasHealed = false;
 
