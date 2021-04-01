@@ -3,34 +3,34 @@
 public static class TagBonuses
 {
     public static readonly Dictionary<(string attack, string target), int> bonusDMG = new Dictionary<(string attack, string target), int>(){
-    {("porazajacy", "specjalny"), 5},
-    {("porazajacy", "podniebny"),-5},
-    {("porazajacy", "uziemiajacy"), 5},
-    {("porazajacy", "pancerny"), -5},
+    {("porazajacy", "specjalny"), 10},
+    {("porazajacy", "podniebny"),-10},
+    {("porazajacy", "uziemiajacy"), 10},
+    {("porazajacy", "pancerny"), -10},
 
-    {("specjalny", "porazajacy"), -5},
-    {("specjalny", "uziemiajacy"),-5},
-    {("specjalny", "pancerny"), 5},
-    {("specjalny", "przebijajacy"), -5},
+    {("specjalny", "porazajacy"), -10},
+    {("specjalny", "uziemiajacy"),-10},
+    {("specjalny", "pancerny"), 10},
+    {("specjalny", "przebijajacy"), -10},
 
-    {("podniebny", "porazajacy"), -5},
-    {("podniebny", "uziemiajacy"),-5},
-    {("podniebny", "pancerny"), 5},
-    {("podniebny", "przebijajacy"), -5},
+    {("podniebny", "porazajacy"), -10},
+    {("podniebny", "uziemiajacy"),-10},
+    {("podniebny", "pancerny"), 10},
+    {("podniebny", "przebijajacy"), -10},
 
-    {("uziemiajacy", "porazajacy"), -5},
-    {("uziemiajacy", "specjalny"),-5},
-    {("uziemiajacy", "podniebny"), 5},
-    {("uziemiajacy", "przebijajacy"), -5},
+    {("uziemiajacy", "porazajacy"), -10},
+    {("uziemiajacy", "specjalny"),-10},
+    {("uziemiajacy", "podniebny"), 10},
+    {("uziemiajacy", "przebijajacy"), -10},
 
-    {("pancerny", "porazajacy"), -5},
-    {("pancerny", "specjalny"),-5},
-    {("pancerny", "podniebny"), 5},
-    {("pancerny", "przebijajacy"), -5},
+    {("pancerny", "porazajacy"), -10},
+    {("pancerny", "specjalny"),-10},
+    {("pancerny", "podniebny"), 10},
+    {("pancerny", "przebijajacy"), -10},
 
-    {("przebijajacy", "specjalny"), -5},
-    {("przebijajacy", "podniebny"),-5},
-    {("przebijajacy", "uziemiajacy"), 5},
-    {("przebijajacy", "pancerny"), -5},
+    {("przebijajacy", "specjalny"), -10},
+    {("przebijajacy", "podniebny"),-10},
+    {("przebijajacy", "uziemiajacy"), 10},
+    {("przebijajacy", "pancerny"), -10},
   };
 }
