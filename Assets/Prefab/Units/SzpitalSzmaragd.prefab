@@ -227,7 +227,7 @@ MonoBehaviour:
   value: 20
   AttackIcon: {fileID: 3055889656280257218}
   designIcon: {fileID: 7310425737281939737}
-  healAmount: 5
+  healAmount: 30
   hasHealed: 0
 --- !u!1 &7310425737281939737
 GameObject:

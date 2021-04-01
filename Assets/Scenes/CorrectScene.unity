@@ -6276,6 +6276,7 @@ RectTransform:
   - {fileID: 1403536542}
   - {fileID: 1861834760}
   - {fileID: 1942436462}
+  - {fileID: 1696918683}
   m_Father: {fileID: 1095369966}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14669,7 +14670,7 @@ Transform:
   m_LocalScale: {x: 73.821434, y: 73.26758, z: 74.48276}
   m_Children: []
   m_Father: {fileID: 694723100}
-  m_RootOrder: 14
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1725863968
 PrefabInstance:
