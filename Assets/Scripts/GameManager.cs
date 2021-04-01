@@ -123,8 +123,8 @@ public class GameManager : MonoBehaviour
             attackRangeTxt.text = activeUnit.attackRange.ToString();
             description.text = activeUnit.descriptionUnitPanel;
             chanceTxt.text =  activeUnit.chance.ToString();
-            debuffMove.text = "Rest of Turn Debuff Move: " + activeUnit.restTurnOfDebuffMove.ToString();
-            debuffAttack.text = "Rest of Turn Debuff Attack: " + activeUnit.restTurnOfDebuffAttack.ToString();
+            debuffMove.text =  activeUnit.restTurnOfDebuffMove.ToString();
+            debuffAttack.text = activeUnit.restTurnOfDebuffAttack.ToString();
             sliderHP.GetComponent<Slider>().value = activeUnit.health / activeUnit.maxHealth;
         }
 
@@ -157,8 +157,8 @@ public class GameManager : MonoBehaviour
             armorTxt2.text = activeUnit.armor.ToString();
             attackRangeTxt2.text =  activeUnit.attackRange.ToString();
             chanceTxt2.text =  activeUnit.chance.ToString();
-            debuffMove2.text = "Rest of Turn Debuff Move: " + activeUnit.restTurnOfDebuffMove.ToString();
-            debuffAttack2.text = "Rest of Turn Debuff Attack: " + activeUnit.restTurnOfDebuffAttack.ToString();
+            debuffMove2.text =  activeUnit.restTurnOfDebuffMove.ToString();
+            debuffAttack2.text = activeUnit.restTurnOfDebuffAttack.ToString();
             sliderHP2.GetComponent<Slider>().value = activeUnit.health / activeUnit.maxHealth;
         }
     }
