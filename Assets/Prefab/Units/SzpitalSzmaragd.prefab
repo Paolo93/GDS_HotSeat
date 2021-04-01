@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 5464029935241617502}
   m_Layer: 10
   m_Name: SzpitalSzmaragd
-  m_TagString: water
+  m_TagString: specjalny
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

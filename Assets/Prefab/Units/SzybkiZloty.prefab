@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 831052307984486974}
   m_Layer: 10
   m_Name: SzybkiZloty
-  m_TagString: plant
+  m_TagString: przebijajacy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

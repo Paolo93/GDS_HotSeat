@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 1007896119763460715}
   m_Layer: 10
   m_Name: KingSzmaragd
-  m_TagString: fire
+  m_TagString: specjalny
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

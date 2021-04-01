@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 737779614788438539}
   m_Layer: 10
   m_Name: Hetman
-  m_TagString: fire
+  m_TagString: uziemiajacy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

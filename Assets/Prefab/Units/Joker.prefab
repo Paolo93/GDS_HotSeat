@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1874977870541665792}
   m_Layer: 10
   m_Name: Joker
-  m_TagString: plant
+  m_TagString: uziemiajacy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
