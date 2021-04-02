@@ -131,7 +131,9 @@ MonoBehaviour:
   maxHealth: 0
   descriptionUnit: "w gotowo\u015Bci! Je\u015Bli ten statek polegnie \u2013 KONIEC
     GRY."
-  descriptionUnitPanel: 
+  descriptionUnitPanel: "SPECJALNY - Nie ma umiej\u0119tno\u015Bci specjalnych. Atakuje
+    mocniej Uziemiaj\u0105cych i Przebijaj\u0105cych. Jego zniszczenie oznacza zwyci\u0119stwo
+    przeciwnika."
   isKing: 1
   cooldown: 0
   name: "Admira\u0142"
@@ -143,7 +145,7 @@ MonoBehaviour:
   health: 85
   armor: 5
   attackRange: 1
-  value: 10
+  value: 99
   AttackIcon: {fileID: 3820138161393887405}
   designIcon: {fileID: 5356682317314650918}
   hasAttacked: 0

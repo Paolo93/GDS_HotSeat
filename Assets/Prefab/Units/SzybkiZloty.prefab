@@ -130,7 +130,9 @@ MonoBehaviour:
   restTurnOfDebuffAttack: 0
   maxHealth: 0
   descriptionUnit: "w gotowo\u015Bci bojowej! Jestem szybki, zwinny i zab\xF3jczy."
-  descriptionUnitPanel: 
+  descriptionUnitPanel: "PRZEBIJAJ\u0104CY - Jednostka specjalnego przeznaczenia
+    - szybko zginie na pierwszej linii, ale jest zab\xF3jcza w ka\u017Cdej innej
+    sytuacji."
   isKing: 0
   cooldown: 0
   name: Sztylet
@@ -142,7 +144,7 @@ MonoBehaviour:
   health: 45
   armor: 5
   attackRange: 1
-  value: 10
+  value: 50
   AttackIcon: {fileID: 3820138161393887405}
   designIcon: {fileID: 4312980288002362245}
   hasAttacked: 0

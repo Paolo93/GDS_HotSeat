@@ -131,7 +131,8 @@ MonoBehaviour:
   maxHealth: 0
   descriptionUnit: "czeka na rozkazy! Moja armata dalekosi\u0119\u017Cna dorwie ka\u017Cdego
     przeciwnika. "
-  descriptionUnitPanel: 
+  descriptionUnitPanel: "PODNIEBNY - Szczeg\xF3lnie niebezpieczna przeciwko jednostkom
+    Uziemiaj\u0105cym oraz Pancernym! Po wykonanym ruchu nie mo\u017Ce zaatakowa\u0107."
   isKing: 0
   cooldown: 0
   name: Haubica
@@ -143,7 +144,7 @@ MonoBehaviour:
   health: 45
   armor: 5
   attackRange: 3
-  value: 10
+  value: 60
   AttackIcon: {fileID: 3820138161393887405}
   designIcon: {fileID: 5749379845919727490}
   hasAttacked: 0

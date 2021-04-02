@@ -16,7 +16,7 @@ public class CanvasManager : MonoBehaviour
     public Animator transition;
     public float transitionTime = 1f;
     public bool isPause = false;
-
+    [SerializeField] private GameObject pausePanel;
 
     void Start()
     {
@@ -46,10 +46,12 @@ public class CanvasManager : MonoBehaviour
         {
             isPause = false;
             Time.timeScale = 1f;
+            pausePanel.SetActive(false);
         } else if(!isPause)
         {
             isPause = true;
             Time.timeScale = 0;
+            pausePanel.SetActive(true);
         }
     }
 

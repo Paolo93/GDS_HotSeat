@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour
         if (activeUnit)
         {
             unitName.text = activeUnit.name;
-            healthTxt.text = "Hp " + activeUnit.health.ToString();
+            healthTxt.text = "Życie: " + activeUnit.health.ToString() + "/" + activeUnit.maxHealth.ToString();
             attackDamageTxt.text = activeUnit.attackDamage.ToString();
             armorTxt.text = activeUnit.armor.ToString();
             attackRangeTxt.text = activeUnit.attackRange.ToString();
@@ -148,8 +148,8 @@ public class GameManager : MonoBehaviour
         }
         if (activeUnit)
         {
-            unitName2.text = activeUnit.name;
-            healthTxt2.text = "Hp " + activeUnit.health.ToString();
+            unitName2.text = activeUnit.name.ToString();
+            healthTxt2.text = "Życie: " + activeUnit.health.ToString() + "/" + activeUnit.maxHealth.ToString();
             description2.text = activeUnit.descriptionUnitPanel;
             attackDamageTxt2.text = activeUnit.attackDamage.ToString();
             armorTxt2.text = activeUnit.armor.ToString();

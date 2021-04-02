@@ -131,20 +131,21 @@ MonoBehaviour:
   restTurnOfDebuffAttack: 0
   maxHealth: 0
   descriptionUnit: "na posterunku! Mog\u0119 zablokowa\u0107 ka\u017Cdego przeciwnika."
-  descriptionUnitPanel: "U\u017Cyj umiej\u0119tno\u015Bci BLOKUJ\u0104CE \u0141A\u0143CUCHY
-    (PPM, zasi\u0119g 3)"
+  descriptionUnitPanel: "UZIEMIAJ\u0104CY - Pryzmatyczne o\u015Blepienie - wroga
+    jednostka (kliknij na niej PPM) w zasi\u0119gu (3) nie mo\u017Ce zaatakowa\u0107
+    w nast\u0119pnej turze. Odnawia si\u0119 przez 2 tury."
   isKing: 0
-  cooldown: 0
+  cooldown: 2
   name: "\u0141owca"
   playerNumber: 1
   tileAmount: 3
   moveSpeed: 2
-  attackDamage: 40
+  attackDamage: 35
   chance: 90
   health: 60
   armor: 10
   attackRange: 1
-  value: 10
+  value: 80
   AttackIcon: {fileID: 3820138161393887405}
   designIcon: {fileID: 3737862900034415457}
   hasAttacked: 0

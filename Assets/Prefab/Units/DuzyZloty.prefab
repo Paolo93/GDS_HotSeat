@@ -130,7 +130,8 @@ MonoBehaviour:
   restTurnOfDebuffAttack: 0
   maxHealth: 0
   descriptionUnit: gotowy do akcji! Armaty mi nie straszne.
-  descriptionUnitPanel: 
+  descriptionUnitPanel: "PANCERNY - Wielki, powolny, ale mocny przeciwko kluczowym
+    jednostkom dzi\u0119ki przynale\u017Cno\u015Bci do kategorii \"Pancerny\"."
   isKing: 0
   cooldown: 0
   name: Forteca
@@ -142,7 +143,7 @@ MonoBehaviour:
   health: 80
   armor: 15
   attackRange: 1
-  value: 20
+  value: 50
   AttackIcon: {fileID: 3820138161393887405}
   designIcon: {fileID: 4283197787599065538}
   hasAttacked: 0

@@ -132,19 +132,21 @@ MonoBehaviour:
   maxHealth: 0
   descriptionUnit: "na posterunku! Mog\u0119 zablokowa\u0107 mo\u017Cliwo\u015B\u0107
     ataku ka\u017Cdego przeciwnika."
-  descriptionUnitPanel: 
+  descriptionUnitPanel: "UZIEMIAJ\u0104CY - Blokuj\u0105ce \u0142a\u0144cuchy - wroga
+    jednostka (kliknij na niej PPM) w zasi\u0119gu (3) nie mo\u017Ce si\u0119 poruszy\u0107
+    w nast\u0119pnej turze. Odnawia si\u0119 przez 2 tury."
   isKing: 0
-  cooldown: 0
+  cooldown: 2
   name: Traper
   playerNumber: 2
   tileAmount: 3
   moveSpeed: 2
-  attackDamage: 35
+  attackDamage: 40
   chance: 90
   health: 55
   armor: 0
   attackRange: 1
-  value: 12
+  value: 80
   AttackIcon: {fileID: 5307314573191143497}
   designIcon: {fileID: 6865229814181285057}
   hasAttacked: 0
