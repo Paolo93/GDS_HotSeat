@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3091956734129224811}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.39, y: 2.57, z: 0}
   m_LocalScale: {x: -1.5, y: 1.3, z: 1}
   m_Children:
@@ -131,7 +131,8 @@ MonoBehaviour:
   restTurnOfDebuffAttack: 0
   maxHealth: 0
   descriptionUnit: "na posterunku! Mog\u0119 zablokowa\u0107 ka\u017Cdego przeciwnika."
-  descriptionUnitPanel: 
+  descriptionUnitPanel: "U\u017Cyj umiej\u0119tno\u015Bci BLOKUJ\u0104CE \u0141A\u0143CUCHY
+    (PPM, zasi\u0119g 3)"
   isKing: 0
   cooldown: 0
   name: "\u0141owca"

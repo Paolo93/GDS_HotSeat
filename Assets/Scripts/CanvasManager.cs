@@ -11,9 +11,11 @@ public class CanvasManager : MonoBehaviour
     public Button Play;
     public Button MenuBtn;
     public Button SwitchGameMode;
+    public Button Pause;
     private GameManager gameManager;
     public Animator transition;
     public float transitionTime = 1f;
+    public bool isPause = false;
 
 
     void Start()
@@ -23,6 +25,7 @@ public class CanvasManager : MonoBehaviour
         if(MenuBtn) MenuBtn.onClick.AddListener(GoToMenu);
         if (SwitchGameMode) SwitchGameMode.onClick.AddListener(gameManager.ChangeDesignMode);
         if (Play) Play.onClick.AddListener(LoadGame);
+        if (Pause) Pause.onClick.AddListener(PauseGame);
     }
 
     public void LoadGame()
@@ -35,6 +38,19 @@ public class CanvasManager : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
         FindObjectOfType<AudioManager>().Play("click_1");
+    }
+    public void PauseGame()
+    {
+        FindObjectOfType<AudioManager>().Play("click_1");
+        if(isPause)
+        {
+            isPause = false;
+            Time.timeScale = 1f;
+        } else if(!isPause)
+        {
+            isPause = true;
+            Time.timeScale = 0;
+        }
     }
 
     IEnumerator LoadScene(int levelIndex)

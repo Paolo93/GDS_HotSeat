@@ -21,6 +21,7 @@ public class Hetman : Soldier, IHetman
                 enemy.isMoveBlocked = true;
                 enemy.restTurnOfDebuffMove = 2;
                 gameManager.ShowMessage($"Jednostka {this.name} zarzuciła blokadę ruchu na jednostkę {enemy.name}");
+                FindObjectOfType<AudioManager>().Play("hetman_umiejetnosc");
                 this.cooldown += 2;
             } 
             else

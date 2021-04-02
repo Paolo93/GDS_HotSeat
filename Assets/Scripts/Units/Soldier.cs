@@ -34,6 +34,7 @@ public class Soldier : Unit, IAttacker
             {
                 //var miss = Messages.Miss[Random.Range(0, Messages.Miss.Length -1)];
                 gameManager.ShowMessage($"{this.name} atakuje {enemy.name} i pudłuje");
+                FindObjectOfType<AudioManager>().Play("miss");
             }
 
             if (enemy.health <= 0)

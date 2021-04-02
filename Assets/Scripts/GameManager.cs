@@ -131,7 +131,6 @@ public class GameManager : MonoBehaviour
             move.text = activeUnit.tileAmount.ToString();
             sliderHP.GetComponent<Slider>().value = activeUnit.health / activeUnit.maxHealth;
         }
-
     }
 
     public void UpdateStatsPanelRight()
@@ -192,6 +191,7 @@ public class GameManager : MonoBehaviour
     //Switch Turn
     public void Switch()
     {
+        FindObjectOfType<AudioManager>().Play("click_1");
         if (playerTurn == 1)
         {
             playerTurn = 2;

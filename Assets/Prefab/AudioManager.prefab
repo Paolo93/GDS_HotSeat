@@ -80,3 +80,15 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: hetman_umiejetnosc
+    clip: {fileID: 8300000, guid: 02e0cd3ca06f14f84a954647d26b7f1c, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: miss
+    clip: {fileID: 8300000, guid: 616ca8e594e47413d8a77235df80964a, type: 3}
+    volume: 0.15
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
