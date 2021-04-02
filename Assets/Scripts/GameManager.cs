@@ -30,8 +30,10 @@ public class GameManager : MonoBehaviour
     public Text attackDamageTxt, attackDamageTxt2;
     public Text armorTxt, armorTxt2;
     public Text attackRangeTxt, attackRangeTxt2;
+    public Text move, move2;
     public Text chanceTxt, chanceTxt2;
     public Text description, description2;
+    public Text unitValue, unitValue2;
     public Slider sliderHP, sliderHP2;
     public Text scoreBattle;
     
@@ -125,13 +127,10 @@ public class GameManager : MonoBehaviour
             chanceTxt.text =  activeUnit.chance.ToString();
             debuffMove.text =  activeUnit.restTurnOfDebuffMove.ToString();
             debuffAttack.text = activeUnit.restTurnOfDebuffAttack.ToString();
+            unitValue.text = activeUnit.value.ToString();
+            move.text = activeUnit.tileAmount.ToString();
             sliderHP.GetComponent<Slider>().value = activeUnit.health / activeUnit.maxHealth;
         }
-
-    }
-
-    public void ScoreUnits()
-    {
 
     }
 
@@ -159,6 +158,8 @@ public class GameManager : MonoBehaviour
             chanceTxt2.text =  activeUnit.chance.ToString();
             debuffMove2.text =  activeUnit.restTurnOfDebuffMove.ToString();
             debuffAttack2.text = activeUnit.restTurnOfDebuffAttack.ToString();
+            unitValue2.text = activeUnit.value.ToString();
+            move2.text = activeUnit.tileAmount.ToString();
             sliderHP2.GetComponent<Slider>().value = activeUnit.health / activeUnit.maxHealth;
         }
     }

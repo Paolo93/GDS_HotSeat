@@ -50,7 +50,7 @@ public class Soldier : Unit, IAttacker
                     gameManager.KingDeath("Dowódca drużyny Szmaragdów pokonany, drużyna Złotych wygrywa!");
                     Time.timeScale = 0f;
                 }
-                else if (isKing == true && playerNumber == 2)
+                else if (enemy.isKing == true && playerNumber == 2)
                 {
                     gameManager.KingDeath("Dowódca drużyny Złotych pokonany, drużyna Szmaragdy wygrywa!");
                     Time.timeScale = 0f;

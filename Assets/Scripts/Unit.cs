@@ -52,7 +52,6 @@ public class Unit : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
         unitManager = FindObjectOfType<UnitManager>();
         maxHealth = health;
-
     }
 
     public void GetWalkablePaths()

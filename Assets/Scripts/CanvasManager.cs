@@ -12,7 +12,6 @@ public class CanvasManager : MonoBehaviour
     public Button MenuBtn;
     public Button SwitchGameMode;
     private GameManager gameManager;
-
     public Animator transition;
     public float transitionTime = 1f;
 
@@ -24,7 +23,6 @@ public class CanvasManager : MonoBehaviour
         if(MenuBtn) MenuBtn.onClick.AddListener(GoToMenu);
         if (SwitchGameMode) SwitchGameMode.onClick.AddListener(gameManager.ChangeDesignMode);
         if (Play) Play.onClick.AddListener(LoadGame);
-
     }
 
     public void LoadGame()
@@ -36,8 +34,8 @@ public class CanvasManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
+        FindObjectOfType<AudioManager>().Play("click_1");
     }
-
 
     IEnumerator LoadScene(int levelIndex)
     {
