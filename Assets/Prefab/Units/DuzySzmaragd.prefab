@@ -130,7 +130,8 @@ MonoBehaviour:
   restTurnOfDebuffAttack: 0
   maxHealth: 0
   descriptionUnit: 'gotowy do akcji! Armaty mi nie straszne. '
-  descriptionUnitPanel: 
+  descriptionUnitPanel: "PANCERNY - Wielki, powolny, ale mocny przeciwko kluczowym
+    jednostkom dzi\u0119ki przynale\u017Cno\u015Bci do kategorii \"Pancerny\"."
   isKing: 0
   cooldown: 0
   name: Bastion
@@ -142,7 +143,7 @@ MonoBehaviour:
   health: 75
   armor: 15
   attackRange: 1
-  value: 10
+  value: 50
   AttackIcon: {fileID: 5307314573191143497}
   designIcon: {fileID: 6389961127846628308}
   hasAttacked: 0

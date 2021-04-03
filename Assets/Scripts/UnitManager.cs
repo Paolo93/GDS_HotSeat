@@ -125,7 +125,7 @@ public class UnitManager : MonoBehaviour
         } 
         else
         {
-            GameManager.ShowMessage($"Jednostka {this.name} ma chwilowo zablokowany atak");
+            GameManager.ShowMessage($"Jednostka {clickedUnit.name} ma chwilowo zablokowany atak");
         }
     }
 
