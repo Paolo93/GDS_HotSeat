@@ -11,7 +11,7 @@ public class CanvasManager : MonoBehaviour
     public Button Play;
     public Button MenuBtn;
     public Button SwitchGameMode;
-    public Button Pause;
+    public Button PauseBtn;
     private GameManager gameManager;
     public Animator transition;
     public float transitionTime = 1f;
@@ -25,7 +25,7 @@ public class CanvasManager : MonoBehaviour
         if(MenuBtn) MenuBtn.onClick.AddListener(GoToMenu);
         if (SwitchGameMode) SwitchGameMode.onClick.AddListener(gameManager.ChangeDesignMode);
         if (Play) Play.onClick.AddListener(LoadGame);
-        if (Pause) Pause.onClick.AddListener(PauseGame);
+        if (PauseBtn) PauseBtn.onClick.AddListener(PauseGame);
     }
 
     public void LoadGame()
@@ -44,15 +44,26 @@ public class CanvasManager : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("click_1");
         if(isPause)
         {
-            isPause = false;
-            Time.timeScale = 1f;
-            pausePanel.SetActive(false);
-        } else if(!isPause)
+            Resume();
+        } 
+        else if(!isPause)
         {
-            isPause = true;
-            Time.timeScale = 0;
-            pausePanel.SetActive(true);
+            Pause();
         }
+    }
+
+    private void Pause()
+    {
+        isPause = true;
+        Time.timeScale = 0;
+        pausePanel.SetActive(true);
+    }
+
+    private void Resume()
+    {
+        isPause = false;
+        Time.timeScale = 1f;
+        pausePanel.SetActive(false);
     }
 
     IEnumerator LoadScene(int levelIndex)
