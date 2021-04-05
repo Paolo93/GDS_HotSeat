@@ -21,7 +21,8 @@ public class Unit : MonoBehaviour
     public string descriptionUnit;
     public string descriptionUnitPanel;
 
-
+    public Sprite imageUnit;
+    
     public bool isKing;
     public int cooldown;
 

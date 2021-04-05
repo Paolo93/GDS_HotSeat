@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     public Text unitValue, unitValue2;
     public Slider sliderHP, sliderHP2;
     public Text scoreBattle;
-    
+    [SerializeField] private Sprite unitsImg, unitsImg2;
 
     public Text debuffMove, debuffMove2;
     public Text debuffAttack, debuffAttack2;
@@ -119,6 +119,7 @@ public class GameManager : MonoBehaviour
         if (activeUnit)
         {
             unitName.text = activeUnit.name;
+            unitsImg = activeUnit.imageUnit;
             healthTxt.text = "Życie: " + activeUnit.health.ToString() + "/" + activeUnit.maxHealth.ToString();
             attackDamageTxt.text = activeUnit.attackDamage.ToString();
             armorTxt.text = activeUnit.armor.ToString();
@@ -149,6 +150,7 @@ public class GameManager : MonoBehaviour
         if (activeUnit)
         {
             unitName2.text = activeUnit.name.ToString();
+            unitsImg2 = activeUnit.imageUnit;
             healthTxt2.text = "Życie: " + activeUnit.health.ToString() + "/" + activeUnit.maxHealth.ToString();
             description2.text = activeUnit.descriptionUnitPanel;
             attackDamageTxt2.text = activeUnit.attackDamage.ToString();
