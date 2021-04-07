@@ -22,6 +22,7 @@ public class Unit : MonoBehaviour
     public string descriptionUnitPanel;
 
     public Sprite imageUnit;
+    public Animator anim;
     
     public bool isKing;
     public int cooldown;
@@ -52,8 +53,10 @@ public class Unit : MonoBehaviour
     {
         gameManager = FindObjectOfType<GameManager>();
         unitManager = FindObjectOfType<UnitManager>();
+        if (anim) anim = GetComponent<Animator>();
         maxHealth = health;
     }
+
 
     public void GetWalkablePaths()
     {

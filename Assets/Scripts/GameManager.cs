@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     public Text unitValue, unitValue2;
     public Slider sliderHP, sliderHP2;
     public Text scoreBattle;
-    [SerializeField] private Sprite unitsImg, unitsImg2;
+    public Sprite unitsImg, unitsImg2;
 
     public Text debuffMove, debuffMove2;
     public Text debuffAttack, debuffAttack2;

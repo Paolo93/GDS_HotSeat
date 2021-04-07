@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -15,6 +16,13 @@ public class Soldier : Unit, IAttacker
         {
             bonus = TagBonuses.bonusDMG[interaction];
         }
+       
+        IEnumerator AttackAnim()
+        {
+            enemy.anim.SetTrigger("isDie");
+            yield return new WaitForSeconds(1);
+            DestroyUnit(enemy);
+        }
 
         if (AttackableUnits().Contains(enemy))
         {
@@ -28,7 +36,7 @@ public class Soldier : Unit, IAttacker
             {
                 enemy.health -= myDamage;
                 gameManager.ShowMessage($"Jednostka {this.name} atakuje {enemy.name} i zadaje {myDamage} punktów obrażeń");
-                FindObjectOfType<AudioManager>().Play("dzwiek_ataku");
+                FindObjectOfType<AudioManager>().Play("dzwiek_ataku"); 
             }
             else
             {
@@ -39,7 +47,8 @@ public class Soldier : Unit, IAttacker
 
             if (enemy.health <= 0)
             {
-                DestroyUnit(enemy);
+
+                StartCoroutine(AttackAnim());
                 GetWalkablePaths();
                 gameManager.RemoveStatsPanel(enemy);
                 gameManager.AddScore(enemy.playerNumber, enemy.value);
