@@ -2116,14 +2116,14 @@ RectTransform:
   m_GameObject: {fileID: 202860671}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -90}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 65, y: 65, z: 1}
   m_Children: []
   m_Father: {fileID: 1205467603}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 345, y: -50}
+  m_AnchoredPosition: {x: 654, y: 22}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &202860673
@@ -2170,7 +2170,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.99, y: 1.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -6657,14 +6657,14 @@ RectTransform:
   m_GameObject: {fileID: 722542945}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -90}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 65, y: 65, z: 1}
   m_Children: []
   m_Father: {fileID: 415666256}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -810.9, y: -50}
+  m_AnchoredPosition: {x: -874, y: 24}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &722542947
@@ -6706,15 +6706,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9cb3b24ef54b6422c8cc6d3db03c6111, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.99, y: 1.53}
+  m_Size: {x: 1.2, y: 0.82}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &728690720
@@ -7910,7 +7910,7 @@ MonoBehaviour:
   sliderHP: {fileID: 1252339247}
   sliderHP2: {fileID: 193417922}
   scoreBattle: {fileID: 1273773318}
-  unitsImg: {fileID: 0}
+  unitsImg: {fileID: 722542945}
   unitsImg2: {fileID: 0}
   debuffMove: {fileID: 1291819123}
   debuffMove2: {fileID: 1083815164}
@@ -18824,6 +18824,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1063832806}
     m_Modifications:
+    - target: {fileID: 737779614788438539, guid: 69c3e53ff6c45084886d6f3381d21e59,
+        type: 3}
+      propertyPath: imageUnit
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4018344409325511367, guid: 69c3e53ff6c45084886d6f3381d21e59,
         type: 3}
       propertyPath: m_RootOrder
