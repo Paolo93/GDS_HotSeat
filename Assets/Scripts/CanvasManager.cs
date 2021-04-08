@@ -18,6 +18,8 @@ public class CanvasManager : MonoBehaviour
     public bool isPause = false;
     [SerializeField] private GameObject pausePanel;
 
+    public GameObject greenTurnLight, blueturnLight;
+
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
@@ -64,6 +66,20 @@ public class CanvasManager : MonoBehaviour
         isPause = false;
         Time.timeScale = 1f;
         pausePanel.SetActive(false);
+    }
+
+    public void SwitchLight(int turn)
+    {
+        turn = gameManager.playerTurn;
+        if(turn == 2)
+        {
+            blueturnLight.SetActive(false);
+            greenTurnLight.SetActive(true);
+        } else if(turn == 1)
+        {
+            blueturnLight.SetActive(true);
+            greenTurnLight.SetActive(false);
+        }
     }
 
     IEnumerator LoadScene(int levelIndex)

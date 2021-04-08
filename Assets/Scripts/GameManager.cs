@@ -42,10 +42,12 @@ public class GameManager : MonoBehaviour
     public Text debuffAttack, debuffAttack2;
 
     private UnitManager UnitManager;
+    private CanvasManager CanvasManager;
 
     private void Start()
     {
         UnitManager = FindObjectOfType<UnitManager>();
+        CanvasManager = FindObjectOfType<CanvasManager>();
     }
 
     public int NumberOfTurn
@@ -181,7 +183,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
     public void ResetTiles()
     {
         foreach(Tiles tile in FindObjectsOfType<Tiles>())
@@ -199,6 +200,7 @@ public class GameManager : MonoBehaviour
             playerTurn = 2;
             ShowMessage($"zmiana tury na Szmaragdy");
             scoreBattle.text = "Wynik starcia ";
+            CanvasManager.SwitchLight(2);
         }
         else if (playerTurn == 2)
         {
@@ -206,6 +208,7 @@ public class GameManager : MonoBehaviour
             ShowMessage($"zmiana tury na Zlotych");
             UpdateTurn();
             scoreBattle.text = "Wynik starcia ";
+            CanvasManager.SwitchLight(1);
             foreach (Unit units in FindObjectsOfType<Unit>())
             {
                 if (units.isMoveBlocked)
@@ -234,7 +237,6 @@ public class GameManager : MonoBehaviour
  
         UnitManager.DeselectUnit();
         ResetTiles();
-        
 
         foreach (Unit units in FindObjectsOfType<Unit>())
         {

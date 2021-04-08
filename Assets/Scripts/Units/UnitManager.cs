@@ -174,7 +174,6 @@ public class UnitManager : MonoBehaviour
         {
             clickedUnit = null;
         }
-
         return clickedUnit;
     }
  

@@ -26,7 +26,7 @@ public class Hetman : Soldier, IHetman
             } 
             else
             {
-                gameManager.ShowMessage($"Jednostka {this.name} nie może blokować przez {this.cooldown} tur");
+                gameManager.ShowMessage($"Jednostka {this.name} nie może blokować przez {this.cooldown} tury");
             }
         }
     }
@@ -46,6 +46,7 @@ public class Hetman : Soldier, IHetman
 
     public void ResetHasMoveBlocked()
     {
-        hasAttacked = false;
+        // hasAttacked = false;
+        hasMoveBlocked = false;
     }
 }

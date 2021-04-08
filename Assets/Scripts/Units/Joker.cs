@@ -45,7 +45,7 @@ public class Joker : Soldier, IJoker
 
     public void ResetHasAttackBlocked()
     {
-        hasAttacked = false;
+        hasAttackBlocked = false;
     }
 
 }
