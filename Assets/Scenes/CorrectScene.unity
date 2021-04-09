@@ -7911,7 +7911,7 @@ MonoBehaviour:
   sliderHP2: {fileID: 193417922}
   scoreBattle: {fileID: 1273773318}
   unitsImg: {fileID: 722542945}
-  unitsImg2: {fileID: 0}
+  unitsImg2: {fileID: 202860671}
   debuffMove: {fileID: 1291819123}
   debuffMove2: {fileID: 1083815164}
   debuffAttack: {fileID: 2112350036}
