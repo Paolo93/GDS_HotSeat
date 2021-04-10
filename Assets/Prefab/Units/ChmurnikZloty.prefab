@@ -32,6 +32,7 @@ Transform:
   m_Children:
   - {fileID: 8093820465957871635}
   - {fileID: 3911323838269166037}
+  - {fileID: 2937729144344359930}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -132,6 +133,7 @@ MonoBehaviour:
   descriptionUnit: "czeka na rozkazy! Moja armata dalekosi\u0119\u017Cna dorwie ka\u017Cdego. "
   descriptionUnitPanel: "PODNIEBNY - Szczeg\xF3lnie niebezpieczna przeciwko jednostkom
     Uziemiaj\u0105cym oraz Pancernym! Po wykonanym ruchu nie mo\u017Ce zaatakowa\u0107."
+  imageUnit: {fileID: 0}
   isKing: 0
   cooldown: 0
   name: Armata
@@ -309,3 +311,93 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &7415424022126901147
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3091956734129224806}
+    m_Modifications:
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: -0.7692308
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.76923084
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762722, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762724, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_Name
+      value: PS_Fire
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec, type: 3}
+--- !u!4 &2937729144344359930 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 7415424022126901147}
+  m_PrefabAsset: {fileID: 0}
