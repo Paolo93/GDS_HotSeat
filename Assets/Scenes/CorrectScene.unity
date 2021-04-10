@@ -13343,6 +13343,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 33b12296d9b9847099c5a4614493d065,
         type: 3}
+    - target: {fileID: 1874977870541665792, guid: 280ed5ecac1d3df4caa42383df21f706,
+        type: 3}
+      propertyPath: descriptionUnit
+      value: "na posterunku! PPM = umiej\u0119tno\u015B\u0107 blokady ataku przeciwnika."
+      objectReference: {fileID: 0}
     - target: {fileID: 3091956734129224806, guid: 280ed5ecac1d3df4caa42383df21f706,
         type: 3}
       propertyPath: m_RootOrder
@@ -18854,6 +18859,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 3eaa3456cabbf224da05bfc220f3dbc3,
         type: 3}
+    - target: {fileID: 737779614788438539, guid: 69c3e53ff6c45084886d6f3381d21e59,
+        type: 3}
+      propertyPath: descriptionUnit
+      value: "na posterunku! PPM = umiej\u0119tno\u015B\u0107 blokady ruchu przeciwnika."
+      objectReference: {fileID: 0}
     - target: {fileID: 4018344409325511367, guid: 69c3e53ff6c45084886d6f3381d21e59,
         type: 3}
       propertyPath: m_RootOrder
