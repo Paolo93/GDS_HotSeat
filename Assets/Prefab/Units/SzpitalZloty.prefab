@@ -312,6 +312,7 @@ MonoBehaviour:
   value: 60
   AttackIcon: {fileID: 3055889656280257218}
   designIcon: {fileID: 2161247568651507386}
+  particleFire: {fileID: 3724505314610660407}
   healAmount: 30
   hasHealed: 0
 --- !u!1001 &9051127021515358293
@@ -391,6 +392,12 @@ PrefabInstance:
 --- !u!4 &3724505314610660404 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 9051127021515358293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &3724505314610660407 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5632888003684762722, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
     type: 3}
   m_PrefabInstance: {fileID: 9051127021515358293}
   m_PrefabAsset: {fileID: 0}

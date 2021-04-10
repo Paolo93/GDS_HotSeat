@@ -46,7 +46,8 @@ public class Unit : MonoBehaviour
     public GameObject AttackIcon;
     public GameObject designIcon;
 
-    
+    public ParticleSystem particleFire;
+
 
     void Start()
     {
