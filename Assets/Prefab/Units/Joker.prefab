@@ -130,10 +130,12 @@ MonoBehaviour:
   restTurnOfDebuffMove: 0
   restTurnOfDebuffAttack: 0
   maxHealth: 0
-  descriptionUnit: "na posterunku! Mog\u0119 zablokowa\u0107 ka\u017Cdego przeciwnika."
+  descriptionUnit: "na posterunku! PPM = umiej\u0119tno\u015B\u0107 blokady ruchu
+    przeciwnika."
   descriptionUnitPanel: "UZIEMIAJ\u0104CY - Pryzmatyczne o\u015Blepienie - wroga
     jednostka (kliknij na niej PPM) w zasi\u0119gu (3) nie mo\u017Ce zaatakowa\u0107
     w nast\u0119pnej turze. Odnawia si\u0119 przez 2 tury."
+  imageUnit: {fileID: 0}
   isKing: 0
   cooldown: 2
   name: "\u0141owca"
