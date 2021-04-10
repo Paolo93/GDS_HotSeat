@@ -216,7 +216,7 @@ MonoBehaviour:
   descriptionUnitPanel: "SPECJALNY - Nie ma umiej\u0119tno\u015Bci specjalnych. Atakuje
     mocniej Uziemiaj\u0105cych i Przebijaj\u0105cych. Jego zniszczenie oznacza zwyci\u0119stwo
     przeciwnika."
-  imageUnit: {fileID: 0}
+  imageUnit: {fileID: 21300000, guid: 0db4ed98eb1d44cf8a5db00e485fb642, type: 3}
   isKing: 1
   cooldown: 0
   name: Komandor
@@ -231,6 +231,7 @@ MonoBehaviour:
   value: 99
   AttackIcon: {fileID: 5307314573191143497}
   designIcon: {fileID: 1644568580663580481}
+  particleFire: {fileID: 4395634551203043154}
   hasAttacked: 0
 --- !u!1 &5307314573191143497
 GameObject:
@@ -395,6 +396,12 @@ PrefabInstance:
 --- !u!4 &4395634551203043153 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 8299122143079469872}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4395634551203043154 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5632888003684762722, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
     type: 3}
   m_PrefabInstance: {fileID: 8299122143079469872}
   m_PrefabAsset: {fileID: 0}

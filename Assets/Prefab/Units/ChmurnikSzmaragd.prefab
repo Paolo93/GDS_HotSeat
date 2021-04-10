@@ -134,7 +134,7 @@ MonoBehaviour:
     przeciwnika. "
   descriptionUnitPanel: "PODNIEBNY - Szczeg\xF3lnie niebezpieczna przeciwko jednostkom
     Uziemiaj\u0105cym oraz Pancernym! Po wykonanym ruchu nie mo\u017Ce zaatakowa\u0107."
-  imageUnit: {fileID: 0}
+  imageUnit: {fileID: 21300000, guid: 5a66b9553eed3b74caf5e97893d60b2e, type: 3}
   isKing: 0
   cooldown: 0
   name: Haubica
@@ -149,6 +149,7 @@ MonoBehaviour:
   value: 60
   AttackIcon: {fileID: 3820138161393887405}
   designIcon: {fileID: 5749379845919727490}
+  particleFire: {fileID: 829043644638928935}
   hasAttacked: 0
 --- !u!1 &3820138161393887405
 GameObject:
@@ -394,6 +395,12 @@ PrefabInstance:
 --- !u!4 &829043644638928932 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 5020760448628106309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &829043644638928935 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5632888003684762722, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
     type: 3}
   m_PrefabInstance: {fileID: 5020760448628106309}
   m_PrefabAsset: {fileID: 0}

@@ -215,7 +215,7 @@ MonoBehaviour:
   descriptionUnitPanel: "PRZEBIJAJ\u0104CY - Jednostka specjalnego przeznaczenia
     - szybko zginie na pierwszej linii, ale jest zab\xF3jcza w ka\u017Cdej innej
     sytuacji."
-  imageUnit: {fileID: 0}
+  imageUnit: {fileID: 21300000, guid: 4ad20ef6a07e949a996b275661b08f5c, type: 3}
   isKing: 0
   cooldown: 0
   name: Kordelas
@@ -230,6 +230,7 @@ MonoBehaviour:
   value: 50
   AttackIcon: {fileID: 5307314573191143497}
   designIcon: {fileID: 3882175558650985460}
+  particleFire: {fileID: 8184592387454677046}
   hasAttacked: 0
 --- !u!1 &5307314573191143497
 GameObject:
@@ -384,6 +385,12 @@ PrefabInstance:
 --- !u!4 &8184592387454677045 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 4591853723917661268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8184592387454677046 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5632888003684762722, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
     type: 3}
   m_PrefabInstance: {fileID: 4591853723917661268}
   m_PrefabAsset: {fileID: 0}

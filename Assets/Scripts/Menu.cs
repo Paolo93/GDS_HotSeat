@@ -19,7 +19,6 @@ public class Menu : MonoBehaviour
         if (CreditsBtn) CreditsBtn.onClick.AddListener(Credits);
         if (CreditsBackBtn) CreditsBackBtn.onClick.AddListener(CreditsBack);
         if (Exit) Exit.onClick.AddListener(ExitGame);
-        FindObjectOfType<AudioManager>().Play("click_1");
     } 
 
     public void Credits()

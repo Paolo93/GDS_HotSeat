@@ -134,7 +134,7 @@ MonoBehaviour:
   descriptionUnitPanel: "PRZEBIJAJ\u0104CY - Jednostka specjalnego przeznaczenia
     - szybko zginie na pierwszej linii, ale jest zab\xF3jcza w ka\u017Cdej innej
     sytuacji."
-  imageUnit: {fileID: 0}
+  imageUnit: {fileID: 21300000, guid: 9fd94348f43e0a54b94b24ace3057766, type: 3}
   isKing: 0
   cooldown: 0
   name: Sztylet
@@ -149,6 +149,7 @@ MonoBehaviour:
   value: 50
   AttackIcon: {fileID: 3820138161393887405}
   designIcon: {fileID: 4312980288002362245}
+  particleFire: {fileID: 9166226993711516723}
   hasAttacked: 0
 --- !u!1 &3820138161393887405
 GameObject:
@@ -389,6 +390,12 @@ PrefabInstance:
 --- !u!4 &9166226993711516720 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 3537844866160855121}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &9166226993711516723 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5632888003684762722, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
     type: 3}
   m_PrefabInstance: {fileID: 3537844866160855121}
   m_PrefabAsset: {fileID: 0}

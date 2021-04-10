@@ -2,7 +2,7 @@
 using System.Linq;
 using UnityEngine;
 using DG.Tweening;
-using UnityEngine.UI;
+
 
 public class Unit : MonoBehaviour
 {
@@ -45,15 +45,24 @@ public class Unit : MonoBehaviour
     protected UnitManager unitManager;
     public GameObject AttackIcon;
     public GameObject designIcon;
-
+    
+    public ParticleSystem particleFire;
     
 
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
-        unitManager = FindObjectOfType<UnitManager>();
+        unitManager = FindObjectOfType<UnitManager>();  
         maxHealth = health;
     }
+    /*
+    public void Update()
+    {
+        if(health <= (maxHealth/2))
+        {
+            particleFire.Play();
+        }
+    }*/
 
     public void GetWalkablePaths()
     {

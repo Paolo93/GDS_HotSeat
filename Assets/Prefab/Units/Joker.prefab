@@ -136,7 +136,7 @@ MonoBehaviour:
   descriptionUnitPanel: "UZIEMIAJ\u0104CY - Pryzmatyczne o\u015Blepienie - wroga
     jednostka (kliknij na niej PPM) w zasi\u0119gu (3) nie mo\u017Ce zaatakowa\u0107
     w nast\u0119pnej turze. Odnawia si\u0119 przez 2 tury."
-  imageUnit: {fileID: 0}
+  imageUnit: {fileID: 21300000, guid: 33b12296d9b9847099c5a4614493d065, type: 3}
   isKing: 0
   cooldown: 2
   name: "\u0141owca"
@@ -151,6 +151,7 @@ MonoBehaviour:
   value: 80
   AttackIcon: {fileID: 3820138161393887405}
   designIcon: {fileID: 3737862900034415457}
+  particleFire: {fileID: 228464630638951456}
   hasAttacked: 0
   hasAttackBlocked: 0
 --- !u!1 &3737862900034415457
@@ -502,6 +503,12 @@ PrefabInstance:
 --- !u!4 &228464630638951459 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 5550583824574396482}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &228464630638951456 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5632888003684762722, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
     type: 3}
   m_PrefabInstance: {fileID: 5550583824574396482}
   m_PrefabAsset: {fileID: 0}

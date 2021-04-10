@@ -133,7 +133,7 @@ MonoBehaviour:
   descriptionUnit: gotowy do akcji! Armaty mi nie straszne.
   descriptionUnitPanel: "PANCERNY - Wielki, powolny, ale mocny przeciwko kluczowym
     jednostkom dzi\u0119ki przynale\u017Cno\u015Bci do kategorii \"Pancerny\"."
-  imageUnit: {fileID: 0}
+  imageUnit: {fileID: 21300000, guid: f5cb4997777eece4fb995c08400fecfc, type: 3}
   isKing: 0
   cooldown: 0
   name: Forteca
@@ -148,6 +148,7 @@ MonoBehaviour:
   value: 50
   AttackIcon: {fileID: 3820138161393887405}
   designIcon: {fileID: 4283197787599065538}
+  particleFire: {fileID: 4864746239401414797}
   hasAttacked: 0
 --- !u!1 &3820138161393887405
 GameObject:
@@ -388,6 +389,12 @@ PrefabInstance:
 --- !u!4 &4864746239401414798 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 986012502687012079}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &4864746239401414797 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5632888003684762722, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
     type: 3}
   m_PrefabInstance: {fileID: 986012502687012079}
   m_PrefabAsset: {fileID: 0}

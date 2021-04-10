@@ -133,7 +133,7 @@ MonoBehaviour:
   descriptionUnit: 'gotowy do akcji! Armaty mi nie straszne. '
   descriptionUnitPanel: "PANCERNY - Wielki, powolny, ale mocny przeciwko kluczowym
     jednostkom dzi\u0119ki przynale\u017Cno\u015Bci do kategorii \"Pancerny\"."
-  imageUnit: {fileID: 0}
+  imageUnit: {fileID: 21300000, guid: 2e794531cf64f43798cc2140d053ed36, type: 3}
   isKing: 0
   cooldown: 0
   name: Bastion
@@ -148,6 +148,7 @@ MonoBehaviour:
   value: 50
   AttackIcon: {fileID: 5307314573191143497}
   designIcon: {fileID: 6389961127846628308}
+  particleFire: {fileID: 8482168261486497790}
   hasAttacked: 0
 --- !u!1 &5307314573191143497
 GameObject:
@@ -393,6 +394,12 @@ PrefabInstance:
 --- !u!4 &8482168261486497789 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 4294955048394181532}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8482168261486497790 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5632888003684762722, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
     type: 3}
   m_PrefabInstance: {fileID: 4294955048394181532}
   m_PrefabAsset: {fileID: 0}
