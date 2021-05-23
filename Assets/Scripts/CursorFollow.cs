@@ -8,7 +8,7 @@ public class CursorFollow : MonoBehaviour
         Cursor.visible = false;
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
-        if (sceneName == "Menu")
+        if (sceneName == "Menu" || sceneName == "Tutorial")
         {
             Cursor.visible = true;
         }

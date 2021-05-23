@@ -9,6 +9,7 @@ public class CanvasManager : MonoBehaviour
 
     public Button SwitchTurn;
     public Button Play;
+    //public Button PlayTutorial;
     public Button MenuBtn;
     public Button SwitchGameMode;
     public Button PauseBtn;
@@ -27,6 +28,7 @@ public class CanvasManager : MonoBehaviour
         if(MenuBtn) MenuBtn.onClick.AddListener(GoToMenu);
         if (SwitchGameMode) SwitchGameMode.onClick.AddListener(gameManager.ChangeDesignMode);
         if (Play) Play.onClick.AddListener(LoadGame);
+        //if (PlayTutorial) Play.onClick.AddListener(LoadGame);
         if (PauseBtn) PauseBtn.onClick.AddListener(PauseGame);
     }
 
