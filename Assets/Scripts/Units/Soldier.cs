@@ -64,6 +64,12 @@ public class Soldier : Unit, IAttacker
                 DestroyUnit(this);
             }
 
+            if (enemy.health <= (enemy.maxHealth / 2))
+            {
+                enemy.particleFire.Play();
+            }
+
+
             gameManager.UpdateStatsPanelLeft();
             gameManager.UpdateStatsPanelRight();
             unitManager.RefreshSelectedUnitTargets();

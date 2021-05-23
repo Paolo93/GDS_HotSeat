@@ -45,9 +45,15 @@ public class Unit : MonoBehaviour
     protected UnitManager unitManager;
     public GameObject AttackIcon;
     public GameObject designIcon;
+<<<<<<< HEAD
     
     public ParticleSystem particleFire;
     
+=======
+
+    public ParticleSystem particleFire;
+
+>>>>>>> master
 
     void Start()
     {
