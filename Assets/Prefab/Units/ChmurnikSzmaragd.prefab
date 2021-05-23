@@ -32,6 +32,7 @@ Transform:
   m_Children:
   - {fileID: 8093820465957871635}
   - {fileID: 4392426000596189738}
+  - {fileID: 829043644638928932}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 0d0017a362fcb2540924aa1fa68d3869, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -133,6 +134,7 @@ MonoBehaviour:
     przeciwnika. "
   descriptionUnitPanel: "PODNIEBNY - Szczeg\xF3lnie niebezpieczna przeciwko jednostkom
     Uziemiaj\u0105cym oraz Pancernym! Po wykonanym ruchu nie mo\u017Ce zaatakowa\u0107."
+  imageUnit: {fileID: 0}
   isKing: 0
   cooldown: 0
   name: Haubica
@@ -217,9 +219,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 1, b: 0.46073484, a: 1}
+  m_SortingOrder: 14
+  m_Sprite: {fileID: 21300000, guid: 679d0b9dcae7f4e4aa5ead66ea1f7506, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -310,3 +312,88 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &5020760448628106309
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3091956734129224806}
+    m_Modifications:
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0759999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.064386785
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5632888003684762724, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+        type: 3}
+      propertyPath: m_Name
+      value: PS_Fire
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec, type: 3}
+--- !u!4 &829043644638928932 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5632888003684762721, guid: 7d13ddbd48685b0419ccb4f7aaadd2ec,
+    type: 3}
+  m_PrefabInstance: {fileID: 5020760448628106309}
+  m_PrefabAsset: {fileID: 0}

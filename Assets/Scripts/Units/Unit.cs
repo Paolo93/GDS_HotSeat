@@ -47,7 +47,8 @@ public class Unit : MonoBehaviour
     public GameObject AttackIcon;
     public GameObject designIcon;
 
-    
+    public ParticleSystem particleFire;
+
 
     void Start()
     {
@@ -144,7 +145,6 @@ public class Unit : MonoBehaviour
             {
                 hasMoved = true;
                 unitManager.RefreshSelectedUnitTargets();
-           
             });
 
         DisableAttackIcon();
@@ -192,11 +192,4 @@ public class Unit : MonoBehaviour
             boomber.ResetHasMassAtacked();
         }
     }
-    /*
-    public void MoveUnitName()
-    {
-        if(unitNameTxt) unitNameTxt.transform.position = (Vector2)this.transform.position + new Vector2(0, 0.5f);
-    }
-    */
-
 }
